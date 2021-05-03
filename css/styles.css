@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 70px 80px;
+}
+
+hr {
+  background-color: #A8C550;
+  height: 3px;
+  border: 0;
+  width: 200px;
+  margin-top: 20px;
+}
+
+h3 {
+  color: #1B3762;
+  font-size: 40px;
+}
+
+.img_accueil {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/bg-accueil.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 105%;
+  margin-bottom: 70px;
+}
+.img_accueil .titre {
+  text-align: center;
+  padding-top: 15%;
+  line-height: 100px;
+}
+.img_accueil h1 {
+  font-size: 80px;
+  color: white;
+}
+.img_accueil h2 {
+  font-size: 40px;
+  color: white;
+}
+
+.about {
+  padding: 70px 80px;
+}
+.about .row {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 50px;
+  flex-flow: row wrap;
+}
+.about .row .about_txt {
+  width: 40%;
+  line-height: 30px;
+  font-size: 18px;
+}
+.about .row .about_img {
+  width: 50%;
+}
+.about .row .about_img .animation_loop {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */
