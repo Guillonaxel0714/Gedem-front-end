@@ -1,11 +1,5 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 section {
-  padding: 70px 80px;
+  padding: 80px;
 }
 
 hr {
@@ -18,10 +12,10 @@ hr {
 
 h3 {
   color: #1B3762;
-  font-size: 40px;
+  font-size: 30px;
 }
 
-.img_accueil {
+.img_home {
   width: 100%;
   height: 100vh;
   background-image: url("../assets/bg-accueil.jpeg");
@@ -30,22 +24,27 @@ h3 {
   background-size: 105%;
   margin-bottom: 70px;
 }
-.img_accueil .titre {
+.img_home .title_home {
   text-align: center;
-  padding-top: 15%;
-  line-height: 100px;
+  padding-top: 10%;
 }
-.img_accueil h1 {
-  font-size: 80px;
+.img_home h1 {
+  font-size: 70px;
   color: white;
 }
-.img_accueil h2 {
-  font-size: 40px;
+.img_home h2 {
+  font-size: 35px;
   color: white;
+  padding-top: 20px;
+}
+.img_home h4 {
+  color: white;
+  font-size: 30px;
+  padding-top: 75px;
 }
 
 .about {
-  padding: 70px 80px;
+  padding: 80px;
 }
 .about .row {
   width: 100%;
@@ -57,7 +56,7 @@ h3 {
 }
 .about .row .about_txt {
   width: 40%;
-  line-height: 30px;
+  line-height: 35px;
   font-size: 18px;
 }
 .about .row .about_img {
@@ -65,6 +64,173 @@ h3 {
 }
 .about .row .about_img .animation_loop {
   max-width: 100%;
+}
+
+.objectifs {
+  padding: 80px;
+}
+.objectifs .all_goals {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 50px 0;
+  background-image: url("../assets/recycle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 125px;
+  background-size: 35%;
+}
+.objectifs .all_goals .goal {
+  width: 475px;
+  padding: 60px 0;
+  text-align: center;
+}
+.objectifs .all_goals .goal .goal_txt {
+  font-size: 16px;
+  line-height: 30px;
+  padding-top: 30px;
+}
+.objectifs .title_goal_1 {
+  margin: 0 auto;
+  width: 150px;
+  border-top: solid #A8C550;
+  border-left: solid #A8C550;
+}
+.objectifs .title_goal_2 {
+  margin: 0 auto;
+  width: 150px;
+  border-top: solid #A8C550;
+  border-right: solid #A8C550;
+}
+.objectifs .title_goal_3 {
+  margin: 0 auto;
+  width: 150px;
+  border-bottom: solid #A8C550;
+  border-left: solid #A8C550;
+}
+.objectifs .title_goal_4 {
+  margin: 0 auto;
+  width: 150px;
+  border-bottom: solid #A8C550;
+  border-right: solid #A8C550;
+}
+.objectifs .title_goal_1 p, .objectifs .title_goal_2 p, .objectifs .title_goal_3 p, .objectifs .title_goal_4 p {
+  text-transform: uppercase;
+  color: #1B3762;
+  font-size: 25px;
+  margin: 10px;
+}
+
+.dates {
+  padding: 80px;
+  width: 100%;
+  height: 650px;
+  background-color: #F2F4F6;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #ffffff91;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link {
+  font-size: 20px;
+  color: #1B3762;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: #2778a7;
+}
+
+.nav-logo {
+  width: 8rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 5rem;
+    left: -100%;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    transition: 0.3s;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
