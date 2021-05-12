@@ -1,0 +1,39 @@
+@mixin title-section {
+    color: $main-color-blue;
+    font-size: $title-size;
+    display: inline-block;
+    position: relative;
+}
+
+@mixin title-section-after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    background-color: $secondary-color;
+    width: 55%;
+    height: 3px;
+    z-index: 0;
+}
+
+@mixin title-goal {
+    text-transform: uppercase;
+    color: $main-color-blue;
+    font-size: 25px;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+@mixin title-goal-after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    height: 3px;
+    width: 100px;
+    background-color: $secondary-color;
+}
+
+
+

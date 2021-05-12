@@ -1,9 +1,32 @@
-@import 'components/home.scss'; 
-@import 'components/navbar.scss'; 
+@import 'pages/accueil.scss';
+@import 'pages/adherents';
+@import 'pages/gouvernance.scss';
+
+@import 'components/timeline.scss';
+@import 'components/to-the-top.scss';
+@import 'components/arrow-down';
+@import 'components/cards_vice_presidence';
+@import 'components/test.scss';
+
+@import 'layout/footer.scss';
+@import 'layout/navbar.scss';
+
+@import 'abstracts/variable.scss';
+@import 'abstracts/mixins.scss';
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: $main-color-blue;
 }

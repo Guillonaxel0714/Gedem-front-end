@@ -6,32 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/bfa3c31352.js" crossorigin="anonymous"></script>
 
     <title>accueil</title>
 </head>
 <body>
     <div class="img_home">
         <header class="header">
-            <nav class="navbar">
-                <div class="nav-logo"><a hr ef="#" class=""><img src="assets/logo.png" alt="logo GEDEM 77"></a></div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">accueil</a>
+            <nav>
+                <div class="nav-img">
+                    <img class="nav-logo" src="assets/logo.png" alt="">
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="">accueil</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">adhérents</a>
+                    <li>
+                        <a href="adherents.html">adhérents</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">gouvernance</a>
+                    <li>
+                        <a href="gouvernance.html">gouvernance</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">contact</a>
+                    <li>
+                        <a href="">contact</a>
                     </li>
                 </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
                 </div>
             </nav>
         </header>
@@ -40,11 +43,17 @@
             <h2>GEstionnaires public des DEchets Ménagers</h2>
             <h4>Adhérents</h4>
         </div>
+ 
+        <a class="scroll-down" href="#about">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+
     </div>
+
+    <a href="javascript:" class="return-to-top"><i class="fas fa-arrow-up"></i></a>
     
-    <section class="about">
+    <section class="about" id="about">
         <h3>Qui sommes-nous ?</h3>
-        <hr>
         <div class="row">
             <div class="about_txt">
                 <p>Le GEDEM 77 (GEstionnaire public des Déchets Ménagers) est une association créée en mars 2006 regroupant des     collectivités ayant pour compétence(s) la collecte et/ou le traitement des déchets ménagers sur la Seine-et-Marne.
@@ -62,22 +71,21 @@
 
     <section class="objectifs">
         <h3>Quels sont nos objectifs ?</h3>
-        <hr>
         <div class="all_goals">
             <div class="goal">
-                <div class="title_goal_1"><p>défendre</p></div>
+                <p class="title_goal_1">défendre</p>
                 <p class="goal_txt">Défendre les intérêts des collectivités et syndicats adhérents auprès des organismes publics et administrations d’Etat ayant un pouvoir ou une action dans le domaine de la collecte ou du traitement des déchets ménagers</p>
             </div>
             <div class="goal">
-                <div class="title_goal_2"><p>servir</p></div>
+                <p class="title_goal_2">servir</p>
                 <p class="goal_txt">Servir de plate-forme d’échange des expériences et connaissances accumulées par chacun des adhérents dans les domaines concernés</p>
             </div>
             <div class="goal">
-                <div class="title_goal_3"><p>emettre</p></div>
+                <p class="title_goal_3">emettre</p>
                 <p class="goal_txt">Emettre des avis sur tous les sujets d’actualité susceptibles d’influer directement ou indirectement sur les domaines concernés</p>
             </div>
             <div class="goal">
-                <div class="title_goal_4"><p>assister</p></div>
+                <p class="title_goal_4">assister</p>
                 <p class="goal_txt">Assister les adhérents dans leur mission de service public de collecte et de traitement des déchets ménagers et assimilés</p>
             </div>
         </div>
@@ -85,11 +93,111 @@
 
     <section class="dates">
         <h3>Les grandes dates</h3>
-        <hr>
+        
+        <div class="timeline">
+            <ol>
+                <li>
+                    <div>
+                    <time>2006</time>
+                    <p>Création de l'association GEDEM 77 regroupant six syndicats de collecte et/ou de traitement des déchets ménagers et assimilés de Seine-et-Marne</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>01 février 2007</time>
+                        <p>Création du groupe de travail Communication</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>03 mars 2007</time>
+                        <p>Le SIETOM de la Région de Tournan-en-Brie intègre l'association</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>28 et 29 mars 2007</time>
+                        <p>Le GEDEM 77 s'associe au SMITOM-LOMBRIC comme partenaire du colloque AMORCE du Mée-sur-Seine portant sur l'optimisation des collectes des déchets</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>19 avril 2007</time>
+                        <p>Création du groupe de travail Déchèterie</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>25 juin 2008</time>
+                        <p>Franck Vernin est élu Président du SMITOM et devient Président du GEDEM 77</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>30 octobre 2012</time>
+                        <p>Le SMETOM de la Vallée du Loing intègre l'association</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>27 juin 2017</time>
+                        <p>BGV intègre l'association</p>
+                    </div>
+                </li>
+            </ol>
+             
+            <div class="arrows">
+              <a class="arrow arrow__prev disabled" disabled>
+                <i class="fas fa-arrow-left"></i>
+              </a>
+              <a class="arrow arrow__next">
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+        </div>
+
     </section>
    
+    <footer>
+        <div class="footer_row">
+            <div class="section_footer_img">
+                <div class="footer_logo">
+                    <img class="logo" src="assets/logo.png" alt="logo gedem 77">
+                </div>
+            </div>
+            <div class="footer-nav">
+                <ul class="footer_ul">
+                    <li class="footer-nav-li">
+                        <a href="#">accueil</a>
+                    </li>
+                    <li class="footer-nav-li">
+                        <a href="#">adhérents</a>
+                    </li>
+                    <li class="footer-nav-li">
+                        <a href="#">gouvernance</a>
+                    </li>
+                    <li class="footer-nav-li">
+                        <a href="#">contact</a>
+                    </li>
+                </ul>
+
+                <p>© 2021 GEDEM 77</p>
+
+            </div>
+            <div class="footer_coord">
+                <div class="tkt">
+                    <p>exemple.mail@gedem.fr</p>
+                    <p>xx.xx.xx.xx.xx</p> 
+                    <p>FAX</p>
+                    <a href="">Se déconnecter</a>
+                </div> 
+               <a class="mentions_legales" href="">Mentions légales</a>
+            </div>
+
+        </div>
+    </footer>
     
-    <script src="jquery-3.6.0.min.js"></script>
+
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
