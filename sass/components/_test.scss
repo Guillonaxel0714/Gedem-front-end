@@ -12,27 +12,6 @@
     text-align: center;
 }
 
-.button{
-    width: 125px;
-    background-color: white;
-    border: 2px solid $main-color-blue;
-    text-align: center;
-    padding: 10px;
-    border-radius: 8px;
-
-
-
-    &:hover{
-        background-color: $main-color-blue;
-        border: 2px solid white;
-        transition: 0.5s;
-            
-        a{
-            color: white;
-            transition: 0.5s;
-        }
-    }
-}
 
 
 .main{

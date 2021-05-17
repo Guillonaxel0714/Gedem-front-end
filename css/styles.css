@@ -326,6 +326,126 @@ ol li {
   padding-top: 10px;
 }
 
+.contact_sct {
+  background-image: url("../assets/bg-contact.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-color: #5bacc7;
+  padding: 50px 0;
+}
+.contact_sct .form {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.808);
+  border-radius: 12px;
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.input_info {
+  flex-basis: 30%;
+}
+.input_info div:not(:first-child) {
+  padding-top: 40px;
+}
+.input_info div:first-child {
+  padding-top: 20px;
+}
+.input_info input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid grey;
+  color: #1B3762;
+  width: 100%;
+  font-size: 1em;
+  padding: 10px;
+}
+
+label {
+  color: #1B3762;
+  text-transform: uppercase;
+  padding: 10px;
+  line-height: 30px;
+}
+
+.message {
+  flex-basis: 70%;
+  padding: 10px 50px;
+}
+.message textarea {
+  width: 100%;
+  height: 300px;
+  resize: none;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.gedem_info {
+  width: 100%;
+  background-color: #F2F4F6;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+}
+
+.coordonne {
+  flex-basis: 40%;
+  padding: 90px;
+}
+.coordonne div {
+  padding: 30px 0;
+  line-height: 30px;
+}
+.coordonne div h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.syndicats {
+  line-height: 30px;
+  flex-basis: 60%;
+  padding-top: 30px;
+}
+.syndicats h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.syndicats #map {
+  width: 100%;
+  height: 400px;
+  background-color: red;
+}
+
+@media screen and (max-width: 875px) {
+  .contact_sct {
+    width: 100%;
+    background-image: none;
+    background-color: #5bacc7;
+  }
+  .contact_sct .form {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.808);
+    border-radius: 12px;
+    display: block;
+  }
+
+  .message {
+    flex-basis: 100%;
+    padding: 50px 0;
+  }
+  .message textarea {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
 .timeline {
   white-space: nowrap;
   overflow-x: hidden;
@@ -466,7 +586,7 @@ ol li {
 .scroll-down {
   margin: 0 auto;
   position: absolute;
-  left: 50%;
+  left: 49%;
   top: 85%;
 }
 .scroll-down .fa-chevron-down {
@@ -584,27 +704,14 @@ ol li {
   margin-top: 5px;
 }
 
-.sct {
-  padding: 80px 10px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.block1, .block2, .block3 {
-  width: 400px;
-  padding-top: 20px;
-  text-align: center;
-}
-
 .button {
-  width: 125px;
   background-color: white;
   border: 2px solid #1B3762;
   text-align: center;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 8px;
+  float: right;
+  margin-top: 10px;
 }
 .button:hover {
   background-color: #1B3762;
@@ -614,36 +721,6 @@ ol li {
 .button:hover a {
   color: white;
   transition: 0.5s;
-}
-
-.main {
-  width: 500px;
-  height: 375px;
-  background-color: #fff;
-  background: linear-gradient(#f8f8f8, #fff);
-  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
-  position: relative;
-}
-.main .header_main {
-  background-color: red;
-  width: 100%;
-  height: 25%;
-  border-radius: 6px 6px 0 0;
-  transition: height 0.5s ease;
-}
-.main .header_main .content_survol {
-  position: absolute;
-  top: 100px;
-}
-
-.main:hover .header_main {
-  height: 100%;
-  border-radius: 6px;
-}
-
-.body_main {
-  position: absolute;
 }
 
 .footer_row {
@@ -704,10 +781,11 @@ ol li {
 }
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   min-height: 17vh;
   background-color: rgba(255, 255, 255, 0.548);
+  padding: 0 50px;
 }
 
 .nav-img {
@@ -719,8 +797,7 @@ nav {
 
 .nav-links {
   display: flex;
-  justify-content: space-around;
-  width: 45%;
+  justify-content: flex-end;
   list-style: none;
   color: #1B3762;
   text-transform: uppercase;
@@ -728,7 +805,8 @@ nav {
 .nav-links a {
   text-decoration: none;
   letter-spacing: 2px;
-  font-size: 20px;
+  font-size: 18px;
+  padding-right: 50px;
 }
 
 .burger {
@@ -744,12 +822,20 @@ nav {
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
+  nav {
+    padding: 0 20px;
+  }
+
   .nav-links {
-    width: 60%;
+    width: 70%;
+  }
+  .nav-links a {
+    font-size: 16px;
+    padding-right: 30px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 875px) {
   body {
     overflow-x: hidden;
   }
@@ -763,10 +849,14 @@ nav {
     top: 17vh;
     background-color: white;
     display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+  }
+  .nav-links a {
+    font-size: 20px;
   }
   .nav-links li {
     opacity: 0;

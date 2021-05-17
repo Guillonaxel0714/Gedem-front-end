@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="./assets/logo.png"/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/bfa3c31352.js" crossorigin="anonymous"></script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <title>contact</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="nav-img">
+                <img class="nav-logo" src="assets/logo.png" alt="">
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">accueil</a>
+                </li>
+                <li>
+                    <a href="">actualités</a>
+                </li>
+                <li>
+                    <a href="adherents.html">adhérents</a>
+                </li>
+                <li>
+                    <a href="gouvernance.html">gouvernance</a>
+                </li>
+                <li>
+                    <a href="contact.html">contact</a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <a href="javascript:" class="return-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <div class="contact_sct">
+        <div class="form">
+            <div class="input_info">
+                <div>
+                    <label id="name" for="name">nom prénom</label>
+                    <input type="text" placeholder="votre nom et prénom" required>
+                </div>
+                <div>
+                    <label id="mail" for="mail">mail</label>
+                    <input type="email" placeholder="votre adresse mail" required>
+                </div>
+                <div>
+                    <label id="country" for="country">ville</label>
+                    <input type="text" placeholder="votre ville" required>
+                </div>
+                <div>
+                    <label id="subject" for="subject">sujet</label>
+                    <input type="text" placeholder="le sujet de votre message" required>
+                </div>
+            </div>
+            <div class="message">
+                <div>
+                    <label id="txt" for="txt">message</label><br>
+                    <textarea name="message" id="message" placeholder="votre message"></textarea>
+                </div>
+                <div class="button">
+                    <a href="">envoyer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="gedem_info">
+        <div class="coordonne">
+            <div>
+                <h3>Coordonnées</h3>
+                <p>Mail: <span>exemple.mail@gedem.fr</span></p>
+                <p>Téléphone : <span>xx.xx.xx.xx.xx</span></p>
+            </div>
+            <div>
+                <h3>Siège social</h3>
+                <p><span> SMITOM LOMBRIC</span></p>
+                <p><span>Rue du tertre de Chérisy</span></p>
+                <p><span>77 000 Vaux-le-Pénil</span></p>
+            </div>
+        </div> 
+        <div class="syndicats">
+            <h3>Coordonnées des syndicats membres</h3>
+            <div id="map"></div>
+       </div>
+    </section>
+
+    <footer>
+        <div class="footer_row">
+            <div class="section_footer_img">
+                <div class="footer_logo">
+                    <img class="logo" src="assets/logo.png" alt="logo gedem 77">
+                </div>
+            </div>
+            <div class="footer-nav">
+                <ul class="footer_ul">
+                    <li class="footer-nav-li">
+                        <a href="#">accueil</a>
+                    </li>
+                    <li class="footer-nav-li">
+                        <a href="#">adhérents</a>
+                    </li>
+                    <li class="footer-nav-li">
+                        <a href="#">gouvernance</a>
+                    </li>
+                    <li class="footer-nav-li">
+                        <a href="#">contact</a>
+                    </li>
+                </ul>
+
+                <p>© 2021 GEDEM 77</p>
+
+            </div>
+            <div class="footer_coord">
+                <div class="tkt">
+                    <p>exemple.mail@gedem.fr</p>
+                    <p>xx.xx.xx.xx.xx</p> 
+                    <p>FAX</p>
+                    <a href="">Se déconnecter</a>
+                </div> 
+               <a class="mentions_legales" href="">Mentions légales</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6OyW5Nr-iIS6YMIovgPdClI132uDHIZ4&callback=initMap">
+    </script>
+
+    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

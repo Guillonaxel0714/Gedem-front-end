@@ -1,0 +1,25 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variable';
+
+.button{
+    background-color: white;
+    border: 2px solid $main-color-blue;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    float: right;
+    margin-top: 10px;
+
+
+
+    &:hover{
+        background-color: $main-color-blue;
+        border: 2px solid white;
+        transition: 0.5s;
+            
+        a{
+            color: white;
+            transition: 0.5s;
+        }
+    }
+}
