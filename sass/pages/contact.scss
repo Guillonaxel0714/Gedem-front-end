@@ -7,10 +7,9 @@
     background-repeat: no-repeat;
     width: 100%;
     background-color: rgb(91, 172, 199);
-    padding: 50px 0;
 
     .form{
-        width: 80%;
+        width: 85%;
         background-color: rgba(255, 255, 255, 0.808);
         border-radius: 12px;
         margin: 0 auto;
@@ -70,16 +69,18 @@ label{
 
 .gedem_info{
     width: 100%;
+    padding: 75px 50px;
     background-color: #F2F4F6;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap-reverse;
+    align-items: center;
 
 }
 
 .coordonne{
-    flex-basis: 40%;
-    padding: 90px;
+    flex-basis: 30%;
+    padding-left: 75px;
 
     div{
         padding: 30px 0;
@@ -93,11 +94,11 @@ label{
 
 .syndicats{
     line-height: 30px;
-    flex-basis: 60%;
-    padding-top: 30px;
+    flex-basis: 70%;
+    padding: 30px;
     h3{
         font-size: 28px;
-        margin-bottom: 30px; 
+        margin-bottom: 50px; 
         text-align: center;
     }
     #map{

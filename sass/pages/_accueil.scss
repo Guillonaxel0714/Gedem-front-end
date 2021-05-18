@@ -80,7 +80,7 @@ h3::after{
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        padding: 50px 0;
+        padding-top: 75px;
         background-image: url('../assets/recycle.png');
         background-repeat: no-repeat;
         background-position: center;
@@ -95,8 +95,53 @@ h3::after{
             p:not(:last-child){
                 @include title-goal;
             }
-            p:not(:last-child):after{
-                @include title-goal-after;   
+
+            .title_goal_1::before{
+                @include title-goal-before-left;
+                height: 80%;
+                top: 0;
+            }
+
+            .title_goal_1::after{
+                @include title-goal-after-top;
+                width: 95%;
+                left: 0;
+            }
+            
+            .title_goal_2::before{
+                @include title-goal-before-right;
+                height: 80%;
+                top: 0;
+            }
+
+            .title_goal_2::after{
+                @include title-goal-after-top;
+                width: 95%;
+                right: 0;
+            }
+
+            .title_goal_3::before{
+                @include title-goal-before-left;
+                height: 80%;
+                bottom: 0;
+            }
+
+            .title_goal_3::after{
+                @include title-goal-after-bottom;
+                width: 95%;
+                left: 0;
+            }
+
+            .title_goal_4::before{
+                @include title-goal-before-right;
+                height: 80%;
+                bottom: 0;
+            }
+
+            .title_goal_4::after{
+                @include title-goal-after-bottom;
+                width: 95%;
+                right: 0;
             }
 
             .goal_txt{
@@ -113,11 +158,10 @@ h3::after{
     background-color: #F2F4F6;
 }
 
-@media only screen and (max-width: 1024px) {
-    
-}
-
 @media only screen and (max-width: 1024px){
+    section{
+        padding: 30px;
+    }
     .img_home{
         background-image: none;
         background-color: rgb(14, 119, 102);
@@ -129,9 +173,18 @@ h3::after{
 
             .goal{
                 p:not(:last-child):after{
-                    @include title-goal-after;   
+                    @include title-goal-after-bottom;   
                 }
             }
         }
     }   
+}
+
+@media screen and (max-width: 875px) {
+    section{
+        padding: 20px;
+    }
+    h3{
+        font-size: $title-size-small;
+    }
 }

@@ -19,7 +19,6 @@ nav{
 .nav-links{
     display: flex;
     justify-content: flex-end;
-
     list-style: none;
     color: $main-color-blue;
     text-transform: uppercase;
@@ -28,7 +27,7 @@ nav{
         text-decoration: none;
         letter-spacing: 2px;
         font-size: 18px;
-        padding-right: 50px;
+        margin-right: 50px;
     }
 }
 
@@ -58,7 +57,7 @@ nav{
         
         a{
             font-size: 16px;
-            padding-right: 30px;
+            margin-right: 30px;
         }
     } 
 }

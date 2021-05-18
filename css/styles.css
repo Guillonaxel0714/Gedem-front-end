@@ -1,3 +1,4 @@
+@charset "UTF-8";
 section {
   padding: 80px;
 }
@@ -15,7 +16,7 @@ h3::after {
   left: 0;
   bottom: -15px;
   background-color: #A8C550;
-  width: 55%;
+  width: 125px;
   height: 3px;
   z-index: 0;
 }
@@ -81,7 +82,7 @@ h3::after {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  padding: 50px 0;
+  padding-top: 75px;
   background-image: url("../assets/recycle.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -101,14 +102,77 @@ h3::after {
   position: relative;
   display: inline-block;
 }
-.objectifs .all_goals .goal p:not(:last-child):after {
+.objectifs .all_goals .goal .title_goal_1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2%;
+  background-color: #A8C550;
+  height: 80%;
+  top: 0;
+}
+.objectifs .all_goals .goal .title_goal_1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 5%;
+  background-color: #A8C550;
+  width: 95%;
+  left: 0;
+}
+.objectifs .all_goals .goal .title_goal_2::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 2%;
+  background-color: #A8C550;
+  height: 80%;
+  top: 0;
+}
+.objectifs .all_goals .goal .title_goal_2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 5%;
+  background-color: #A8C550;
+  width: 95%;
+  right: 0;
+}
+.objectifs .all_goals .goal .title_goal_3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2%;
+  background-color: #A8C550;
+  height: 80%;
+  bottom: 0;
+}
+.objectifs .all_goals .goal .title_goal_3::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 25%;
-  height: 3px;
-  width: 100px;
+  height: 5%;
   background-color: #A8C550;
+  width: 95%;
+  left: 0;
+}
+.objectifs .all_goals .goal .title_goal_4::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 2%;
+  background-color: #A8C550;
+  height: 80%;
+  bottom: 0;
+}
+.objectifs .all_goals .goal .title_goal_4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 5%;
+  background-color: #A8C550;
+  width: 95%;
+  right: 0;
 }
 .objectifs .all_goals .goal .goal_txt {
   font-size: 16px;
@@ -122,6 +186,10 @@ h3::after {
 }
 
 @media only screen and (max-width: 1024px) {
+  section {
+    padding: 30px;
+  }
+
   .img_home {
     background-image: none;
     background-color: #0e7766;
@@ -134,10 +202,17 @@ h3::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 25%;
-    height: 3px;
-    width: 100px;
+    height: 5%;
     background-color: #A8C550;
+  }
+}
+@media screen and (max-width: 875px) {
+  section {
+    padding: 20px;
+  }
+
+  h3 {
+    font-size: 25px;
   }
 }
 .members {
@@ -332,10 +407,9 @@ ol li {
   background-repeat: no-repeat;
   width: 100%;
   background-color: #5bacc7;
-  padding: 50px 0;
 }
 .contact_sct .form {
-  width: 80%;
+  width: 85%;
   background-color: rgba(255, 255, 255, 0.808);
   border-radius: 12px;
   margin: 0 auto;
@@ -389,15 +463,17 @@ label {
 
 .gedem_info {
   width: 100%;
+  padding: 75px 50px;
   background-color: #F2F4F6;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap-reverse;
+  align-items: center;
 }
 
 .coordonne {
-  flex-basis: 40%;
-  padding: 90px;
+  flex-basis: 30%;
+  padding-left: 75px;
 }
 .coordonne div {
   padding: 30px 0;
@@ -410,12 +486,12 @@ label {
 
 .syndicats {
   line-height: 30px;
-  flex-basis: 60%;
-  padding-top: 30px;
+  flex-basis: 70%;
+  padding: 30px;
 }
 .syndicats h3 {
   font-size: 28px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   text-align: center;
 }
 .syndicats #map {
@@ -446,9 +522,12 @@ label {
     margin-top: 10px;
   }
 }
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline {
   white-space: nowrap;
   overflow-x: hidden;
+  padding: 100px 0;
 }
 
 .timeline ol {
@@ -462,7 +541,7 @@ label {
   position: relative;
   display: inline-block;
   list-style-type: none;
-  width: 160px;
+  width: 200px;
   height: 3px;
   background: #DFDFDF;
 }
@@ -495,7 +574,6 @@ label {
   padding: 15px;
   font-size: 1rem;
   white-space: normal;
-  color: black;
   background: white;
 }
 
@@ -530,24 +608,97 @@ label {
   border-color: transparent transparent transparent white;
 }
 
+.timeline .date_event {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1B3762;
+  margin-bottom: 8px;
+}
+
+/* TIMELINE ARROWS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline .arrows {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.timeline .arrows i {
+  color: #1B3762;
 }
 
-.timeline .arrows .arrow__prev, .arrow__next {
-  padding: 20px;
-  margin: 25px;
-  background-color: #a8c550b6;
-  border-radius: 50px;
-  cursor: pointer;
+.timeline .arrows .arrow__prev {
+  margin-right: 50px;
 }
 
 .timeline .disabled {
   opacity: 0.5;
 }
 
+.timeline .arrows img {
+  width: 45px;
+  height: 45px;
+}
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 599px) {
+  .timeline ol,
+.timeline ol li {
+    width: auto;
+  }
+
+  .timeline ol {
+    padding: 0;
+    transform: none !important;
+  }
+
+  .timeline ol li {
+    display: block;
+    height: auto;
+    background: transparent;
+  }
+
+  .timeline ol li:first-child {
+    margin-top: 25px;
+  }
+
+  .timeline ol li:not(:first-child) {
+    margin-left: auto;
+  }
+
+  .timeline ol li div {
+    width: 94%;
+    height: auto !important;
+    margin: 0 auto 25px;
+  }
+
+  .timeline ol li div {
+    position: static;
+  }
+
+  .timeline ol li:nth-child(odd) div {
+    transform: none;
+  }
+
+  .timeline ol li:nth-child(odd) div::before,
+.timeline ol li:nth-child(even) div::before {
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: none;
+    border-left: 1px solid white;
+    height: 25px;
+  }
+
+  .timeline ol li:last-child,
+.timeline ol li:nth-last-child(2) div::before,
+.timeline ol li:not(:last-child)::after,
+.timeline .arrows {
+    display: none;
+  }
+}
 .return-to-top {
   position: fixed;
   bottom: 20px;
@@ -624,12 +775,12 @@ label {
   z-index: -1;
 }
 
-.card:hover:before {
+.card:hover::before {
   transform: rotate(20deg);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
-.card:hover:after {
+.card:hover::after {
   transform: rotate(10deg);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
@@ -713,12 +864,18 @@ label {
   float: right;
   margin-top: 10px;
 }
+.button input[type=submit] {
+  color: #1B3762;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 .button:hover {
   background-color: #1B3762;
   border: 2px solid white;
   transition: 0.5s;
 }
-.button:hover a {
+.button:hover input {
   color: white;
   transition: 0.5s;
 }
@@ -806,7 +963,7 @@ nav {
   text-decoration: none;
   letter-spacing: 2px;
   font-size: 18px;
-  padding-right: 50px;
+  margin-right: 50px;
 }
 
 .burger {
@@ -832,7 +989,7 @@ nav {
   }
   .nav-links a {
     font-size: 16px;
-    padding-right: 30px;
+    margin-right: 30px;
   }
 }
 @media screen and (max-width: 875px) {

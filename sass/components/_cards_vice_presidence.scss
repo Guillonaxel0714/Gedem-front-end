@@ -29,12 +29,12 @@
     z-index:-1;
 }
 
-.card:hover:before{
+.card:hover::before{
     transform: rotate(20deg);
     box-shadow: 0 2px 20px rgba(0,0,0,.2);
 }
 
-.card:hover:after{
+.card:hover::after{
     transform: rotate(10deg);
     box-shadow: 0 2px 20px rgba(0,0,0,.2);
 }

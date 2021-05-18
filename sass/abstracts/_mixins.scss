@@ -11,7 +11,7 @@
     left: 0;
     bottom: -15px;
     background-color: $secondary-color;
-    width: 55%;
+    width: 125px;
     height: 3px;
     z-index: 0;
 }
@@ -25,13 +25,38 @@
     display: inline-block;
 }
 
-@mixin title-goal-after{
+
+// BORDER TITLE GOALS SECTION - BEFORE AFTER 
+
+@mixin title-goal-after-bottom{
     content: '';
     position: absolute;
     bottom: 0;
-    left: 25%;
-    height: 3px;
-    width: 100px;
+    height: 5%;
+    background-color: $secondary-color;
+}
+
+@mixin title-goal-after-top{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 5%;
+    background-color: $secondary-color;
+}
+
+@mixin title-goal-before-left{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 2%;
+    background-color: $secondary-color;
+}
+
+@mixin title-goal-before-right{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 2%;
     background-color: $secondary-color;
 }
 
