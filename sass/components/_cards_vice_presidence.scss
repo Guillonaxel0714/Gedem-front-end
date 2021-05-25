@@ -1,14 +1,17 @@
+@import '../abstracts/mixins.scss';
+@import '../abstracts/variable.scss';
+
 
 .all_cards{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-flow: row wrap;
 }
 
 .card{
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 275px;
+    height: 350px;
     margin: 150px 0;
     background: #fff;
     border-radius: 4px;
@@ -30,12 +33,12 @@
 }
 
 .card:hover::before{
-    transform: rotate(20deg);
+    transform: rotate(10deg);
     box-shadow: 0 2px 20px rgba(0,0,0,.2);
 }
 
 .card:hover::after{
-    transform: rotate(10deg);
+    transform: rotate(5deg);
     box-shadow: 0 2px 20px rgba(0,0,0,.2);
 }
 

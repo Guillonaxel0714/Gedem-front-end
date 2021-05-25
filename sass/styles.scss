@@ -8,9 +8,11 @@
 @import 'components/arrow-down';
 @import 'components/cards_vice_presidence';
 @import 'components/button.scss';
+@import 'components/test.scss';
 
 @import 'layout/footer.scss';
 @import 'layout/navbar.scss';
+@import 'layout/articles.scss';
 
 @import 'abstracts/variable.scss';
 @import 'abstracts/mixins.scss';
@@ -30,4 +32,12 @@ ul{
 a{
     text-decoration: none;
     color: $main-color-blue;
+}
+
+h4{
+    font-size: 18px;
+
+    &:hover{
+        text-decoration: underline;
+    }
 }

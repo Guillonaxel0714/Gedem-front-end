@@ -9,11 +9,18 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <script src="https://kit.fontawesome.com/bfa3c31352.js" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
     <title>contact</title>
 </head>
-<body>
+<body onload="initMap()">
     <header class="header">
         <nav>
             <div class="nav-img">
@@ -94,7 +101,7 @@
         </div> 
         <div class="syndicats">
             <h3>Coordonnées des syndicats membres</h3>
-            <div id="map"></div>
+            <div id="mapid"></div>
        </div>
     </section>
 
@@ -140,7 +147,6 @@
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6OyW5Nr-iIS6YMIovgPdClI132uDHIZ4&callback=initMap">
     </script>
-
     
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>

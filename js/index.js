@@ -111,18 +111,6 @@ goToTop.addEventListener("click", function () {
 });
 
 
-let map;
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 48.542105, lng: 2.6554 },
-    zoom: 10,
-
-  });
-}
-
-
-
 (function() {
 
   // VARIABLES
@@ -224,25 +212,47 @@ function initMap() {
     hammer.on("swipeleft", () => next.click());
     hammer.on("swiperight", () => prev.click());
   }
-
-  // ADD BASIC KEYBOARD FUNCTIONALITY
-  function setKeyboardFn(prev, next) {
-    document.addEventListener("keydown", (e) => {
-      if ((e.which === 37) || (e.which === 39)) {
-        const timelineOfTop = timeline.offsetTop;
-        const y = window.pageYOffset;
-        if (timelineOfTop !== y) {
-          window.scrollTo(0, timelineOfTop);
-        }
-        if (e.which === 37) {
-          prev.click();
-        } else if (e.which === 39) {
-          next.click();
-        }
-      }
-    });
-  }
-
 })();
+
+
+// MAP 
+
+
+const mapBoxToken = 'pk.eyJ1IjoiYXhlbGdsbiIsImEiOiJja3Azc2h6YWEwNWF6Mm9zMTc3Z2tnYjFwIn0.eEATJq-JytA15vszl5420w';
+
+let mymap;
+
+function initMap(){
+
+  var mymap = L.map('mapid', {scrollWheelZoom:false}).setView([48.542105, 	2.6554], 9);
+  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: mapBoxToken,
+    }
+  ).addTo(mymap);
+
+  var smitomNord = L.marker([49.01720930856356, 2.823984430691334]).bindPopup('<h4><a href="https://www.smitom-nord77.fr">SMITOM Nord 77</a></h4>14 rue de la Croix Gillet <br>77 122 Monthyon <br>01 60 44 40 03'),
+    sietom = L.marker([48.732494115679664, 2.794000701993996]).bindPopup('<h4><a href="https://www.sietom77.com/">SIETOM</a></h4>45 route de Fontenay<br>77 220 Tourman-en-Brie<br>01 64 07 99 75'),
+    smitomLombric = L.marker([48.541697150154796, 2.6893844304584813]).bindPopup('<h4><a href="http://www.lombric.com">SMITOM LOMBRIC</a></h4>14 rue du Tertre de Cherisy <br> 77 000 Vaux-le-Pénil <br>  01 64 83 58 60'),
+    sietrem = L.marker([48.87526005033607, 2.6741277271256756]).bindPopup('<h4><a href="https://www.sietrem.fr/">SIETREM</a></h4>3 Rue du Grand Pommeraye<br>77400 Saint-Thibault-des-Vignes<br>0 800 770 061'),
+    sirmotom  = L.marker([48.38417620762194, 2.9726241750001448]).bindPopup('<h4><a href="https://www.sirmotom.fr/">SIRMOTOM</a></h4>22 rue de la Grande Haie<br>77130 Montereau-Fault-Yonne<br>01 64 32 67 23'),
+    begeval  = L.marker([48.18433460548265, 2.2428465847739836]).bindPopup('<h4><a href="https://www.begeval.fr/">BEGEVAL</a></h4>Route de Bouzonville-en-Beauce<br>45300 Pithiviers<br>02 38 06 02 88'),
+    smetomGeeode  = L.marker([48.56252298998192, 3.03508625595096]).bindPopup('<h4><a href="https://www.smetom-geeode.fr/">SMETOM GEEODE</a></h4>Route Nationale 19<br>77370 Nangis<br>01 64 00 26 45'),
+    sivom  = L.marker([48.68733574714206, 2.5798378774585786]).bindPopup('<h4><a href="https://www.sivom.com/">SIVOM</a></h4>Route du Tremblay<br>91480 Varennes-Jarcy<br>01 69 00 96 90'),
+    smetom  = L.marker([48.2900376746293, 2.6894619591314113]).bindPopup('<h4><a href="http://www.smetomvalleeduloing.fr/">SMETOM</a></h4>13 Rue des Étangs<br>77140 Saint-Pierre-lès-Nemours<br>01 64 29 35 63');
+
+    L.layerGroup([smitomNord, sietom, smitomLombric, sietom, sietrem,sirmotom, begeval, smetomGeeode, sivom, smetom]).addTo(mymap);
+
+}
+
+initMap();
+
+
+
+
 
 

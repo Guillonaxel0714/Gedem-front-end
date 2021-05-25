@@ -1,3 +1,4 @@
+@import '../abstracts/mixins.scss';
 @import '../abstracts/variable.scss';
 
 
@@ -87,35 +88,6 @@
     padding: 130px 0;
     text-align: center;
 
-
-    .vice-presidence{
-        width: 250px;
-        border-radius: 12px;
-        background-color: white;
-        padding: 30px 20px;
-
-        .name{
-            color: $main-color-blue !important;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        .img-vice-president{
-            width: 80%;
-            height: 300px;
-            margin: 0 auto;
-            padding: 15px 0;
-
-            img{
-                width: 100%;
-            }
-        }
-        .status{
-            .syndicat{
-                color: $secondary-color;
-                padding-top: 10px;
-            }
-        }
-    }
 }
 
 

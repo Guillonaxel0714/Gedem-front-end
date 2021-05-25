@@ -1,11 +1,51 @@
-.scroll-down{
+@import '../abstracts/mixins.scss';
+@import '../abstracts/variable.scss';
+
+.scroll_down{
+    width: 30px;
+    height: 50px;
     margin: 0 auto;
-    position: absolute;
-    left: 49%; 
-    top: 85%;
-    .fa-chevron-down{
-        color: white;
-        font-size: 50px;
+    margin-top: 125px;
+    border: white solid 3px;
+    border-radius: 15px;
+    position: relative;
+    animation: scroll-down 3s infinite;
+
+    &::before{
+        content: '';
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        border-radius: 50px;
+        background-color: white;
+        left: 8px;
+        top: 20%;
     }
-}    
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-left: white solid 3px;
+        border-bottom: white solid 3px;
+        bottom: -20px;
+        left: 7px;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes scroll-down {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-25px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
 

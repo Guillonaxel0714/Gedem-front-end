@@ -1,5 +1,5 @@
-@import '../abstracts/variable';
-@import '../abstracts/mixins';
+@import '../abstracts/mixins.scss';
+@import '../abstracts/variable.scss';
 
 .members{
     background-color: #F2F4F6;
@@ -89,5 +89,41 @@ ol{
 
     img{
         max-width: 100%;
+    }
+}
+
+
+// SECTION PARTENAIRES
+
+.all_partenaires{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .partenaire{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 400px;
+        height: 300px;
+        text-align: center;
+        line-height: 25px;
+        margin: 75px 20px;
+
+        a{
+            color: $secondary-color;
+        }
+    }
+}
+
+.img_partenaire{
+    width: 60%;
+    height: 30%;
+    margin: 0 auto;
+
+    img{
+        max-width: 100%;
+        max-height: 100%;
     }
 }
