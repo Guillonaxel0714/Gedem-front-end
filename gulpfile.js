@@ -1,31 +1,25 @@
-const { src, dest, watch, parallel } = require('gulp');
-const gulpSass = require('gulp-sass');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 
-function sync() {
+function style(){
+    return gulp.src('./scss/**/*scss')
+    .pipe(sass())
+    .pipe(gulp.dest('./css'))
+    .pipe(browserSync.stream());
+
+}
+
+function watch(){
     browserSync.init({
         server: {
             baseDir: './'
         }
-    })
-    watch('*.html').on('change', browserSync.reload);
+    });
+    gulp.watch('./scss/**/*.scss', style);
+    gulp.watch('./*.html').on('change', browserSync.reload);
+    gulp.watch('./js/**/*.js').on('change', browserSync.reload);
 }
 
-function sass() {
-    return src('sass/styles.scss')
-    .pipe(gulpSass())
-    .pipe(dest('css/'))
-    .pipe(browserSync.stream())
-}
-
-function watcher(done) {
-    watch('sass/styles.scss', sass)
-    browserSync.reload();
-    done();
-}
-
-module.exports = {
-    sass,
-    watcher,
-    sync: parallel(sync, watcher)
-}
+exports.style = style;
+exports.watch = watch;

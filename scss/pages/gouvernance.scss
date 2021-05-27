@@ -64,21 +64,8 @@
     background: #F2F4F6;
     position: relative;
     z-index: 0;
-    .title-vice-presidence{
-        font-size: $title-size;
-        color: $main-color-blue;
-        text-align: center;
-        position: relative;
-
-        &::after{
-            content: '';
-            background-color: $secondary-color;
-            height: 2px;
-            width: 100px;
-            position: absolute;
-            left: 45%;
-            bottom: -10px;
-        }
+    h3{
+        margin: 0 auto;
     }
 }
 
