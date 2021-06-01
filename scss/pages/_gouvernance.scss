@@ -22,10 +22,7 @@
     }
 
     .container-president{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: flex-start;
+        @include flex-el(flex, space-evenly, row, flex-start, wrap);
         padding: $padding-section + 0 50px;
 
         .img-president{

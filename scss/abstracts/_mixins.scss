@@ -28,6 +28,12 @@
     flex-wrap: $wrap;
 }
 
+@mixin bg-placement($bg-size, $bg-position, $bg-repeat) {
+    background-size: $bg-size;
+    background-position: $bg-position;
+    background-repeat: $bg-repeat;
+}
+
 %title-goal {
     text-transform: uppercase;
     color: $main-color-blue;

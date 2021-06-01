@@ -34,6 +34,18 @@ a{
     color: $main-color-blue;
 }
 
+section{
+    padding: $padding-section;
+}
+
+h3{
+    @include title-section($main-color-blue, $title-size);
+}
+
+h3::after{
+    @include title-section-after(125px, 3px, auto, 0, -15px, 0);
+}
+
 h4{
     font-size: 18px;
 
