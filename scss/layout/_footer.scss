@@ -1,10 +1,12 @@
 @import '../abstracts/mixins.scss';
 @import '../abstracts/variable.scss';
 
+footer{
+    border-top: 0.5px solid $main-color-blue;
+}
+
 .footer_row{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flex-el(flex, space-around, row, flex-start, wrap);
     padding: 3rem 5rem 1rem;
     
 }
@@ -40,7 +42,6 @@
 
     .tkt{
         line-height: 35px;
-        padding-bottom: 25px;
         font-size: 14px;
     }
 
@@ -49,7 +50,6 @@
 @media screen and (max-width:768px){
     .footer_row{
         flex-direction: column-reverse;
-        align-items: flex-start;
 
         .footer-nav{
             width: 100%;

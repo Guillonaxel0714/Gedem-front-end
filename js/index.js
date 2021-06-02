@@ -5,6 +5,7 @@ const navSlide = () => {
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links li');
 
+  
   burger.addEventListener('click', ()=>{
     nav.classList.toggle('nav-active');
 
@@ -49,7 +50,7 @@ setTimeout(countdown, delta);
 
 // ANNIMATION TEXT WRITE/DELETE
 
-const txtAnim = document.querySelector('h4');
+const txtAnim = document.getElementById('writter_txt');
 
 new Typewriter(txtAnim, {
   loop: true,

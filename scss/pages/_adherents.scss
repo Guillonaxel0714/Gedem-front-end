@@ -1,25 +1,29 @@
 @import '../abstracts/mixins.scss';
 @import '../abstracts/variable.scss';
 
+.all_cards{
+    margin-top: 100px;
+}
+
 .members{
     background-color: #F2F4F6;
     width: 100%;
 }
 
 .card_member {
-    width: 425px;
-    height: 375px;
+    width: 550px;
+    height: 400px;
     background-color: #fff;
     background: linear-gradient(#f8f8f8, #fff);
     box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
     border-radius: 6px;
     position: relative;
-    margin: 15px 0;
+    margin: 50px 0;
 
     .header_card {
         position: absolute;
         width: 100%;
-        height: 30%;
+        height: 20%;
         background: #dde7f5;
         transition: height 0.4s;
         overflow: hidden;
@@ -30,8 +34,7 @@
             font-size: 20px;
             color: $main-color-blue;
             display: inline-block;  
-            padding: 20px;
-            padding-top: 40px;
+            padding: 30px 20px;
             text-transform: uppercase;
         }
     }
@@ -66,19 +69,14 @@
         float: left;
         position: absolute;
         height: 100%;
-        top: 100px;
-        padding: 20px;
+        top: 75px;
+        padding: 30px;
     }
 }
 
-.all_cards{
-    @include flex-el(flex, space-evenly , row, center, wrap);
-    margin-top: 100px;
-}
-
-
 ol{
-    list-style: none;
+    list-style: circle;
+    margin-top: 10px;
     li{
         line-height: 30px;
     }
@@ -87,10 +85,10 @@ ol{
 .img_card{
     @include bg-placement(contain, right, no-repeat);
     position: absolute;
-    width: 40%;
-    height: 22%;
-    right: 25px;
-    top: 15px;
+    width: 35%;
+    height: 28%;
+    right: 40px;
+    top: -50px;
     z-index: 5;
 }
 

@@ -3,30 +3,36 @@
 
 
 .img_home{
-    width: 100%;
     height: 100vh;
-    @include bg-placement(cover, center, no-repeat);
+    padding-bottom: 50px;
     background-image: url('../assets/bg-accueil.jpeg');
-    margin-bottom: 70px;
-    position: relative;
+    @include bg-placement(cover, center, no-repeat);
+    @include flex-el(flex, space-between, column, center, nowrap);
+
+    header{
+        width: 100%;
+    }
 
     .title_home{
         text-align: center;
-        padding-top: 150px;
     }
     h1{
         font-size: $h1-size;
         color: $color-white;
     }
     h2{
-        font-size: 35px;
+        font-size: 4.5vh;
         color: $color-white;
         padding-top: 20px;
     }
     h4{
         color: $color-white;
-        font-size: 30px;
-        padding-top: 75px;
+        font-size: 3.5vh;
+        padding-top: 50px;
+
+        &:hover{
+            text-decoration: underline;
+        }
     }
 }
 
@@ -64,11 +70,10 @@
         margin: 0 auto;
 
         .goal{
-            width: 475px;
+            width: 35%;
             min-width: 300px;
-            margin: 60px;
             text-align: center;
-
+            margin: 60px;
             p:not(:last-child){
                 @extend %title-goal;
             }
@@ -168,27 +173,11 @@
                 text-align: center;
             }
             .about_img{
-                width: 75%;
+                width: 90%;
             }
         }
     }
 
-    .img_home{
-        background-color: $main-color-blue;
-
-        .title_home{
-            padding: 100px 0px;
-        }
-        h1{
-            font-size: 45px;
-        }
-        h2{
-            font-size: 25px;
-        }
-        h4{
-            font-size: 23px;
-        }
-    }
     h3{
         font-size: $title-size-small;
     }

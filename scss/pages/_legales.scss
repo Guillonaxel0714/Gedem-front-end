@@ -1,0 +1,31 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variable';
+
+.mentions_legales{
+    line-height: 28px;
+
+    h1{
+        text-align: center;
+        position: relative;
+        color: $main-color-blue;
+        font-size: 35px;
+        margin: 50px 0;
+
+        &::after{
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100px;
+            background-color: $secondary-color;
+            bottom: -15px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    h4{
+        position: relative;
+        color: $main-color-blue;
+        font-size: $title-size;  
+        margin: 100px 0 20px;
+    }
+}

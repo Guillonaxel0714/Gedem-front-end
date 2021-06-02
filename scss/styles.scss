@@ -1,7 +1,9 @@
 @import 'pages/accueil.scss';
+@import 'pages/actualites.scss';
 @import 'pages/adherents.scss';
 @import 'pages/gouvernance.scss';
 @import 'pages/contact.scss';
+@import 'pages/legales.scss';
 
 @import 'components/timeline.scss';
 @import 'components/to-the-top.scss';
@@ -46,10 +48,4 @@ h3::after{
     @include title-section-after(125px, 3px, auto, 0, -15px, 0);
 }
 
-h4{
-    font-size: 18px;
 
-    &:hover{
-        text-decoration: underline;
-    }
-}

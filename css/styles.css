@@ -8,28 +8,34 @@
   display: inline-block; }
 
 .img_home {
-  width: 100%;
   height: 100vh;
+  padding-bottom: 50px;
+  background-image: url("../assets/bg-accueil.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/bg-accueil.jpeg");
-  margin-bottom: 70px;
-  position: relative; }
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap; }
+  .img_home header {
+    width: 100%; }
   .img_home .title_home {
-    text-align: center;
-    padding-top: 150px; }
+    text-align: center; }
   .img_home h1 {
-    font-size: 70px;
+    font-size: 9vh;
     color: white; }
   .img_home h2 {
-    font-size: 35px;
+    font-size: 4.5vh;
     color: white;
     padding-top: 20px; }
   .img_home h4 {
     color: white;
-    font-size: 30px;
-    padding-top: 75px; }
+    font-size: 3.5vh;
+    padding-top: 50px; }
+    .img_home h4:hover {
+      text-decoration: underline; }
 
 .about .row {
   width: 100%;
@@ -63,10 +69,10 @@
   padding: 75px 0;
   margin: 0 auto; }
   .objectifs .all_goals .goal {
-    width: 475px;
+    width: 35%;
     min-width: 300px;
-    margin: 60px;
-    text-align: center; }
+    text-align: center;
+    margin: 60px; }
     .objectifs .all_goals .goal .title_goal_1::before {
       content: '';
       position: absolute;
@@ -159,17 +165,7 @@
       width: 90%;
       text-align: center; }
     .about .row .about_img {
-      width: 75%; }
-  .img_home {
-    background-color: #1B3762; }
-    .img_home .title_home {
-      padding: 100px 0px; }
-    .img_home h1 {
-      font-size: 45px; }
-    .img_home h2 {
-      font-size: 25px; }
-    .img_home h4 {
-      font-size: 23px; }
+      width: 90%; }
   h3 {
     font-size: 25px; } }
 
@@ -185,23 +181,41 @@
   position: relative;
   display: inline-block; }
 
+.all_articles {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.objectifs .all_goals .goal p:not(:last-child) {
+  text-transform: uppercase;
+  color: #1B3762;
+  font-size: 25px;
+  padding: 10px;
+  position: relative;
+  display: inline-block; }
+
+.all_cards {
+  margin-top: 100px; }
+
 .members {
   background-color: #F2F4F6;
   width: 100%; }
 
 .card_member {
-  width: 425px;
-  height: 375px;
+  width: 550px;
+  height: 400px;
   background-color: #fff;
   background: linear-gradient(#f8f8f8, #fff);
   box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   position: relative;
-  margin: 15px 0; }
+  margin: 50px 0; }
   .card_member .header_card {
     position: absolute;
     width: 100%;
-    height: 30%;
+    height: 20%;
     background: #dde7f5;
     transition: height 0.4s;
     overflow: hidden;
@@ -211,8 +225,7 @@
       font-size: 20px;
       color: #1B3762;
       display: inline-block;
-      padding: 20px;
-      padding-top: 40px;
+      padding: 30px 20px;
       text-transform: uppercase; }
   .card_member .body_card {
     width: 100%;
@@ -238,19 +251,12 @@
   float: left;
   position: absolute;
   height: 100%;
-  top: 100px;
-  padding: 20px; }
-
-.all_cards {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 100px; }
+  top: 75px;
+  padding: 30px; }
 
 ol {
-  list-style: none; }
+  list-style: circle;
+  margin-top: 10px; }
   ol li {
     line-height: 30px; }
 
@@ -259,10 +265,10 @@ ol {
   background-position: right;
   background-repeat: no-repeat;
   position: absolute;
-  width: 40%;
-  height: 22%;
-  right: 25px;
-  top: 15px;
+  width: 35%;
+  height: 28%;
+  right: 40px;
+  top: -50px;
   z-index: 5; }
 
 .all_partenaires {
@@ -304,10 +310,9 @@ ol {
   display: inline-block; }
 
 .gouvernance .presentation {
-  text-align: center;
-  width: 65%;
-  margin: 0 auto;
-  padding: 120px 0; }
+  text-align: left;
+  width: 55%;
+  padding: 80px; }
   .gouvernance .presentation p {
     padding-top: 5vh;
     line-height: 35px;
@@ -320,7 +325,7 @@ ol {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   padding: 80px 50px; }
   .gouvernance .container-president .img-president {
@@ -340,8 +345,7 @@ ol {
     width: 35vw;
     font-size: 22px;
     text-align: center;
-    line-height: 35px;
-    margin-top: 8%; }
+    line-height: 35px; }
     .gouvernance .container-president .txt-president .president_name {
       padding-bottom: 10%;
       font-size: 40px;
@@ -483,6 +487,37 @@ label {
     flex-basis: 100%;
     padding-left: 0;
     display: block; } }
+
+.objectifs .all_goals .goal p:not(:last-child) {
+  text-transform: uppercase;
+  color: #1B3762;
+  font-size: 25px;
+  padding: 10px;
+  position: relative;
+  display: inline-block; }
+
+.mentions_legales {
+  line-height: 28px; }
+  .mentions_legales h1 {
+    text-align: center;
+    position: relative;
+    color: #1B3762;
+    font-size: 35px;
+    margin: 50px 0; }
+    .mentions_legales h1::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 100px;
+      background-color: #A8C550;
+      bottom: -15px;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .mentions_legales h4 {
+    position: relative;
+    color: #1B3762;
+    font-size: 30px;
+    margin: 100px 0 20px; }
 
 .objectifs .all_goals .goal p:not(:last-child) {
   text-transform: uppercase;
@@ -653,7 +688,7 @@ label {
   display: block;
   opacity: 0;
   transition: opacity 0.5s ease;
-  border-radius: 35px;
+  border-radius: 12px;
   z-index: 999; }
 
 .return-to-top.active {
@@ -684,7 +719,7 @@ label {
 .scroll_down {
   width: 30px;
   height: 50px;
-  margin: 100px auto;
+  margin: 0 auto;
   border: white solid 3px;
   border-radius: 15px;
   position: relative;
@@ -734,7 +769,7 @@ label {
   position: relative;
   width: 275px;
   height: 350px;
-  margin: 100px 0;
+  margin: 0 0 100px;
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
@@ -907,10 +942,15 @@ label {
   position: relative;
   display: inline-block; }
 
+footer {
+  border-top: 0.5px solid #1B3762; }
+
 .footer_row {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
   padding: 3rem 5rem 1rem; }
 
 .section_footer_img {
@@ -933,13 +973,11 @@ label {
   text-align: justify; }
   .footer_coord .tkt {
     line-height: 35px;
-    padding-bottom: 25px;
     font-size: 14px; }
 
 @media screen and (max-width: 768px) {
   .footer_row {
-    flex-direction: column-reverse;
-    align-items: flex-start; }
+    flex-direction: column-reverse; }
     .footer_row .footer-nav {
       width: 100%;
       padding: 25px 0 25px 25%; }
@@ -1060,7 +1098,7 @@ nav {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 80px auto;
+  margin: 50px auto;
   box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
   background: white;
   line-height: 1.4;
@@ -1155,8 +1193,11 @@ nav {
   @media (min-width: 640px) {
     .blog-card {
       flex-direction: row;
-      max-width: 1000px;
+      max-width: 800px;
       height: 200px; }
+      .blog-card.row {
+        max-width: 600px;
+        height: 210px; }
       .blog-card .meta {
         flex-basis: 30%;
         height: auto; }
@@ -1215,8 +1256,3 @@ h3::after {
   left: 0;
   background-color: #A8C550;
   z-index: 0; }
-
-h4 {
-  font-size: 18px; }
-  h4:hover {
-    text-decoration: underline; }

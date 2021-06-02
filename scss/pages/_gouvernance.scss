@@ -4,10 +4,9 @@
 
 .gouvernance{
     .presentation{
-        text-align: center;
-        width: 65%;
-        margin: 0 auto;
-        padding: $padding-section + 40px 0;
+        text-align: left;
+        width: 55%;
+        padding: 80px;
 
         p{
             padding-top: 5vh;
@@ -22,7 +21,7 @@
     }
 
     .container-president{
-        @include flex-el(flex, space-evenly, row, flex-start, wrap);
+        @include flex-el(flex, space-evenly, row, center, wrap);
         padding: $padding-section + 0 50px;
 
         .img-president{
@@ -46,7 +45,6 @@
             font-size: 22px;
             text-align: center;
             line-height: 35px;
-            margin-top: 8%;
 
             .president_name{
                 padding-bottom: 10%;

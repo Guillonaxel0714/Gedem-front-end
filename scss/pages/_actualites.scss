@@ -1,0 +1,6 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variable';
+
+.all_articles{
+    @include flex-el(flex, space-evenly, row, center, wrap);
+}

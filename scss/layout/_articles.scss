@@ -9,7 +9,7 @@ $color_grey_dark: #a2a2a2;
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 80px auto;
+    margin: 50px auto;
     box-shadow: 0 3px 7px -1px rgba(#000, .1);
     background: $color_white;
     line-height: 1.4;
@@ -139,8 +139,13 @@ $color_grey_dark: #a2a2a2;
 
     @media (min-width: 640px) {
         flex-direction: row;
-        max-width: 1000px;
+        max-width: 800px;
         height: 200px;
+
+        &.row{
+            max-width: 600px;
+            height: 210px;
+        }
 
         .meta {
             flex-basis: 30%;
