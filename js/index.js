@@ -99,7 +99,7 @@ window.addEventListener('scroll', () => {
     hiddenButton.classList.remove('active');
   }
 });
-
+ 
 
 const goToTop = document.querySelector('.return-to-top');
 
@@ -111,8 +111,6 @@ goToTop.addEventListener("click", function () {
   });     
 });
 
-
-(function() {
 
   // VARIABLES
   const timeline = document.querySelector(".timeline ol"),
@@ -132,7 +130,6 @@ goToTop.addEventListener("click", function () {
     setEqualHeights(elH);
     animateTl(xScrolling, arrows, timeline);
     setSwipeFn(timeline, arrowPrev, arrowNext);
-    setKeyboardFn(arrowPrev, arrowNext);
   }
 
   // SET EQUAL HEIGHTS
@@ -213,7 +210,7 @@ goToTop.addEventListener("click", function () {
     hammer.on("swipeleft", () => next.click());
     hammer.on("swiperight", () => prev.click());
   }
-})();
+
 
 
 // MAP 
@@ -225,7 +222,7 @@ let mymap;
 
 function initMap(){
 
-  var mymap = L.map('mapid', {scrollWheelZoom:false}).setView([48.542105, 	2.6554], 9);
+  var mymap = L.map('mapid', {scrollWheelZoom:false}).setView([48.64369, 	2.6554], 9);
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
