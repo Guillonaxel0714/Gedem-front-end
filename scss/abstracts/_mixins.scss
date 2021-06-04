@@ -1,8 +1,9 @@
 @import './variable.scss';
 
-@mixin title-section($main-blue, $font-size, $display: inline-block, $pos: relative) {
+@mixin title-section($main-blue, $font-size, $padding, $display: inline-block, $pos: relative) {
     color: $main-blue;
     font-size: $font-size;
+    padding: $padding;
     display: $display;
     position: $pos;
 }

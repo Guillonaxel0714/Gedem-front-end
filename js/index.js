@@ -30,20 +30,24 @@ navSlide();
 
 // COMPTEUR
 
-var n = 381; // Nombre final du compteur
-var cpt = 0; // Initialisation du compteur
-var duree = 1; // Durée en seconde pendant laquel le compteur ira de 0 à 15
-var delta = Math.ceil((duree * 0.1) / n); // On calcule l'intervalle de temps entre chaque rafraîchissement du compteur (durée mise en milliseconde)
 var node =  document.getElementById("compteur"); // On récupère notre noeud où sera rafraîchi la valeur du compteur
- 
-function countdown() {
-  node.innerHTML = ++cpt;
-  if( cpt < n ) { // Si on est pas arrivé à la valeur finale, on relance notre compteur une nouvelle fois
-     setTimeout(countdown, delta);
+
+if(undefined != node){
+  var n = node.innerHTML; // Nombre final du compteur
+  var cpt = 0; // Initialisation du compteur
+  var duree = 1; // Durée en seconde pendant laquel le compteur ira de 0 à 15
+  var delta = Math.ceil((duree * 0.1) / n); // On calcule l'intervalle de temps entre chaque rafraîchissement du compteur (durée mise en milliseconde)
+
+  function countdown() {
+    node.innerHTML = ++cpt;
+    if( cpt < n ) { // Si on est pas arrivé à la valeur finale, on relance notre compteur une nouvelle fois
+      setTimeout(countdown, delta);
+    }
   }
+  
+  setTimeout(countdown, delta);
+
 }
- 
-setTimeout(countdown, delta);
 
 
 
@@ -113,16 +117,17 @@ goToTop.addEventListener("click", function () {
 
 
   // VARIABLES
-  const timeline = document.querySelector(".timeline ol"),
-    elH = document.querySelectorAll(".timeline li > div"),
-    arrows = document.querySelectorAll(".timeline .arrows .arrow"),
-    arrowPrev = document.querySelector(".timeline .arrows .arrow__prev"),
-    arrowNext = document.querySelector(".timeline .arrows .arrow__next"),
-    firstItem = document.querySelector(".timeline li:first-child"),
-    lastItem = document.querySelector(".timeline li:last-child"),
-    xScrolling = 280,
-    disabledClass = "disabled";
+const timeline = document.querySelector(".timeline ol"),
+elH = document.querySelectorAll(".timeline li > div"),
+arrows = document.querySelectorAll(".timeline .arrows .arrow"),
+arrowPrev = document.querySelector(".timeline .arrows .arrow__prev"),
+arrowNext = document.querySelector(".timeline .arrows .arrow__next"),
+firstItem = document.querySelector(".timeline li:first-child"),
+lastItem = document.querySelector(".timeline li:last-child"),
+xScrolling = 280,
+disabledClass = "disabled";
 
+if(undefined != timeline){
   // START
   window.addEventListener("load", init);
 
@@ -210,23 +215,25 @@ goToTop.addEventListener("click", function () {
     hammer.on("swipeleft", () => next.click());
     hammer.on("swiperight", () => prev.click());
   }
-
+}
 
 
 // MAP 
 
 
-const mapBoxToken = 'pk.eyJ1IjoiYXhlbGdsbiIsImEiOiJja3Azc2h6YWEwNWF6Mm9zMTc3Z2tnYjFwIn0.eEATJq-JytA15vszl5420w';
+
 
 let mymap;
 
-function initMap(){
+function initmap(){
+
+  const mapBoxToken = 'pk.eyJ1IjoiYXhlbGdsbiIsImEiOiJja3Azc2h6YWEwNWF6Mm9zMTc3Z2tnYjFwIn0.eEATJq-JytA15vszl5420w';
 
   var mymap = L.map('mapid', {scrollWheelZoom:false}).setView([48.64369, 	2.6554], 9);
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
-    id: 'mapbox/streets-v11',
+    id: 'mapbox/outdoors-v11',
     tileSize: 512,
     zoomOffset: -1,
     accessToken: mapBoxToken,
@@ -247,7 +254,7 @@ function initMap(){
 
 }
 
-initMap();
+initmap();
 
 
 

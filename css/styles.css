@@ -38,22 +38,41 @@
     .img_home h4:hover {
       text-decoration: underline; }
 
-.about .row {
-  width: 100%;
+.sct_about {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 100px; }
+
+.block1 {
+  width: 50%; }
+  .block1 .gedem {
+    color: #A8C550;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center; }
+
+.about_img {
+  width: 50%; }
+  .about_img .animation_loop {
+    width: 100%; }
+
+.icon {
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  flex-wrap: wrap; }
-  .about .row .about_txt {
-    width: 50%;
-    line-height: 35px;
-    padding-top: 60px; }
-  .about .row .about_img {
-    width: 50%;
-    padding-top: 50px; }
-    .about .row .about_img .animation_loop {
-      max-width: 100%; }
+  flex-wrap: nowrap;
+  margin: 50px 0; }
+  .icon i {
+    color: #1B3762;
+    font-size: 50px;
+    margin-right: 50px; }
+  .icon p {
+    width: 70%;
+    line-height: 25px; }
 
 .objectifs .all_goals {
   width: 100%;
@@ -145,6 +164,31 @@
 .dates {
   background-color: #F2F4F6; }
 
+@media screen and (max-width: 425px) {
+  .icon {
+    flex-wrap: wrap;
+    align-items: stretch; }
+    .icon p {
+      width: 100%; }
+    .icon i {
+      margin: 25px auto; } }
+
+@media screen and (max-width: 850px) {
+  p {
+    font-size: 14px;
+    text-align: justify;
+    line-height: 30px; }
+  .sct_about {
+    flex-direction: column; }
+  .icon {
+    justify-content: center; }
+  .block1 {
+    width: 100%; }
+  .about_img {
+    width: 100%; }
+  h3 {
+    font-size: 25px; } }
+
 @media only screen and (max-width: 1024px) {
   section {
     padding: 30px !important; }
@@ -154,21 +198,6 @@
     bottom: 0;
     height: 5%;
     background-color: #A8C550; } }
-
-@media screen and (max-width: 768px) {
-  p {
-    font-size: 14px;
-    text-align: justify;
-    line-height: 30px; }
-  .about .row {
-    flex-direction: column; }
-    .about .row .about_txt {
-      width: 90%;
-      text-align: center; }
-    .about .row .about_img {
-      width: 90%; }
-  h3 {
-    font-size: 25px; } }
 
 @media only screen and (min-width: 1920px) {
   section {
@@ -272,7 +301,7 @@
   box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   position: relative;
-  margin: 50px 0; }
+  margin: 50px 20px; }
   .card_member .header_card {
     position: absolute;
     width: 100%;
@@ -370,44 +399,61 @@ ol {
   position: relative;
   display: inline-block; }
 
-.gouvernance .presentation {
-  text-align: left;
-  width: 55%;
-  padding: 80px; }
-  .gouvernance .presentation p {
-    padding-top: 5vh;
-    line-height: 35px;
-    font-size: 20px; }
-    .gouvernance .presentation p b {
-      font-size: 20px;
-      color: #1B3762; }
+.img_intro {
+  width: 40%;
+  margin: 50px auto;
+  position: relative; }
+  .img_intro svg {
+    position: relative; }
+    .img_intro svg polyline, .img_intro svg circle, .img_intro svg line {
+      opacity: 1; }
+    .img_intro svg .st3 {
+      stroke-dasharray: 3600px;
+      stroke-dashoffset: 3600px;
+      animation: anim 3s ease forwards; }
 
-.gouvernance .container-president {
+@keyframes anim {
+  to {
+    stroke-dashoffset: 0; } }
+    .img_intro svg .st5 {
+      stroke-dasharray: 3600px;
+      stroke-dashoffset: 3600px;
+      animation: anim 6s ease forwards; }
+    .img_intro svg circle {
+      animation: appear 1.5s ease-in forwards; }
+
+@keyframes appear {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.container-president {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  padding: 80px 50px; }
-  .gouvernance .container-president .img-president {
+  padding: 80px 80px 20px0 50px; }
+  .container-president .img-president {
     width: 30vw;
     padding: 25px;
     display: flex;
     align-items: center;
     background-color: #bfd1e79c;
     border-radius: 12px; }
-    .gouvernance .container-president .img-president img {
+    .container-president .img-president img {
       width: 100%;
       border-radius: 12px;
       display: block;
       margin-left: auto;
       margin-right: auto; }
-  .gouvernance .container-president .txt-president {
+  .container-president .txt-president {
     width: 35vw;
     font-size: 22px;
     text-align: center;
     line-height: 35px; }
-    .gouvernance .container-president .txt-president .president_name {
+    .container-president .txt-president .president_name {
       padding-bottom: 10%;
       font-size: 40px;
       color: #1B3762; }
@@ -447,6 +493,8 @@ ol {
     padding: 50px;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
     flex-wrap: wrap; }
 
 .input_info {
@@ -490,14 +538,14 @@ label {
   background-color: #F2F4F6;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap-reverse;
-  align-items: center; }
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap; }
 
 .coordonne {
-  flex-basis: 25%;
-  padding-left: 75px; }
+  flex-basis: 30%;
+  padding-left: 50px; }
   .coordonne div {
-    padding: 30px 0;
     line-height: 30px; }
     .coordonne div h3 {
       font-size: 28px;
@@ -505,8 +553,7 @@ label {
 
 .syndicats {
   line-height: 30px;
-  flex-basis: 75%;
-  padding: 30px; }
+  flex-basis: 70%; }
   .syndicats h3 {
     font-size: 28px;
     margin-bottom: 50px;
@@ -532,22 +579,23 @@ label {
       width: 100%;
       margin-top: 10px; }
   .coordonne {
-    flex-basis: 100%;
-    padding-left: 0;
-    display: flex;
-    justify-content: space-evenly; }
+    flex-basis: 35%;
+    padding-left: 10px;
+    text-align: center; }
+    .coordonne p {
+      text-align: center; }
   .syndicats {
-    flex-basis: 100%;
+    flex-basis: 65%;
     padding: 50px 0; } }
 
-@media screen and (max-width: 875px) {
-  .contact_sct .form {
-    width: 100%;
-    padding: 30px; }
+@media screen and (max-width: 768px) {
+  .gedem_info {
+    flex-direction: column-reverse; }
   .coordonne {
-    flex-basis: 100%;
-    padding-left: 0;
-    display: block; } }
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; } }
 
 .objectifs .all_goals .goal p:not(:last-child) {
   text-transform: uppercase;
@@ -1253,11 +1301,12 @@ a {
   color: #1B3762; }
 
 section {
-  padding: 80px; }
+  padding: 80px 80px 20px; }
 
 h3 {
   color: #1B3762;
   font-size: 30px;
+  padding: 15px 0;
   display: inline-block;
   position: relative; }
 
@@ -1268,7 +1317,7 @@ h3::after {
   height: 3px;
   top: auto;
   right: 0;
-  bottom: -15px;
+  bottom: 0;
   left: 0;
   background-color: #A8C550;
   z-index: 0; }
