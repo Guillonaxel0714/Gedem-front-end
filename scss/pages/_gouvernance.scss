@@ -2,12 +2,32 @@
 @import '../abstracts/variable.scss';
 
 .img_intro{
-    width: 40%;
+    width: 50%;
     margin: 50px auto;
     position: relative;
 
     svg{
-        position: relative;
+        width: 75%;
+    }
+
+    &:before{
+        content: 'Le GEDEM 77';
+        position: absolute;
+        color: $secondary-color;
+        top: 110px;
+        left: 210px;
+        font-size: 28px;
+    }
+
+    &:after{
+        content: 'Elle est dirigée par un Conseil d\'administration composé d\'un Président et de sept Vice-présidents élus pour deux ans par l\'Assemblée générale.';
+        position: absolute;
+        top: 160px;
+        left: 210px;
+        line-height: 25px;
+    }
+
+    svg{
 
         polyline, circle, line{
             opacity: 1;
@@ -16,7 +36,7 @@
         .st3{
             stroke-dasharray: 3600px;
             stroke-dashoffset: 3600px;
-            animation: anim 3s ease forwards;
+            animation: anim 4s ease forwards;
         }
 
         @keyframes anim {
@@ -28,7 +48,7 @@
         .st5{
             stroke-dasharray: 3600px;
             stroke-dashoffset: 3600px;
-            animation: anim 6s ease forwards;
+            animation: anim 10s ease forwards;
         }
 
         circle{

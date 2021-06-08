@@ -5,24 +5,26 @@ const navSlide = () => {
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links li');
 
+  if(undefined != nav){ 
   
-  burger.addEventListener('click', ()=>{
-    nav.classList.toggle('nav-active');
+    burger.addEventListener('click', ()=>{
+      nav.classList.toggle('nav-active');
 
 
-    //animation des links
+      //animation des links
 
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = '';
-      } else{
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-      }
+      navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+          link.style.animation = '';
+        } else{
+          link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+        }
+      });
+
+      // animation burger
+      burger.classList.toggle('toggle');
     });
-
-    // animation burger
-    burger.classList.toggle('toggle');
-  });
+  }
 }
 
 navSlide();
@@ -96,24 +98,27 @@ new Typewriter(txtAnim, {
 
 const hiddenButton = document.querySelector('.return-to-top');
 
-window.addEventListener('scroll', () => {
-  if(window.pageYOffset > 200){
-    hiddenButton.classList.add('active');
-  } else {
-    hiddenButton.classList.remove('active');
-  }
-});
+if(undefined != hiddenButton){ 
+
+  window.addEventListener('scroll', () => {
+    if(window.pageYOffset > 200){
+      hiddenButton.classList.add('active');
+    } else {
+      hiddenButton.classList.remove('active');
+    }
+  });
  
 
-const goToTop = document.querySelector('.return-to-top');
+  const goToTop = document.querySelector('.return-to-top');
 
-goToTop.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth" 
-  });     
-});
+  goToTop.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth" 
+    });     
+  });
+}
 
 
   // VARIABLES
@@ -224,8 +229,11 @@ if(undefined != timeline){
 
 
 let mymap;
+var mapid = document.getElementById('mapid')
 
 function initmap(){
+
+  if(mapid){
 
   const mapBoxToken = 'pk.eyJ1IjoiYXhlbGdsbiIsImEiOiJja3Azc2h6YWEwNWF6Mm9zMTc3Z2tnYjFwIn0.eEATJq-JytA15vszl5420w';
 
@@ -251,13 +259,38 @@ function initmap(){
     smetom  = L.marker([48.2900376746293, 2.6894619591314113]).bindPopup('<h4><a href="http://www.smetomvalleeduloing.fr/">SMETOM</a></h4>13 Rue des Étangs<br>77140 Saint-Pierre-lès-Nemours<br>01 64 29 35 63');
 
     L.layerGroup([smitomNord, sietom, smitomLombric, sietom, sietrem,sirmotom, begeval, smetomGeeode, sivom, smetom]).addTo(mymap);
-
+  }
 }
 
 initmap();
 
+let zindex = 10;
 
+const cardButton = document.querySelector('.card');
+const cards = document.querySelector('.cards');
 
+cardButton.addEventListener('click', (e) =>{
+  e.preventDefault();
+  let isShowing = false;
+  
+  if(cardButton.classList.contains('show')){
+    isShowing = true;
+  }
+  if(cards.classList.contains('showing')){
+    cardButton.classList.remove('show');
 
+    if(isShowing){
+      cards.classList.remove('showing');
+    } else {
+      cards.classList.add('show');
+    }
 
+    zindex++;
 
+  } else{
+    cards.classList.add('showing');
+
+    cardButton.classList.add('show');
+    zindex++;
+  }
+});

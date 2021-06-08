@@ -286,80 +286,148 @@
   position: relative;
   display: inline-block; }
 
-.all_cards {
-  margin-top: 100px; }
+ol {
+  list-style: circle; }
 
 .members {
   background-color: #F2F4F6;
   width: 100%; }
 
-.card_member {
-  width: 550px;
-  height: 400px;
-  background-color: #fff;
-  background: linear-gradient(#f8f8f8, #fff);
-  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
+.title_card {
+  font-size: 20px;
+  color: #1B3762;
+  display: inline-block;
+  padding: 10px;
+  text-transform: uppercase; }
+
+a.btn {
+  background: #1B3762;
+  border-radius: 4px;
+  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
+  color: white;
+  display: inline-block;
+  padding: 6px 30px 8px;
   position: relative;
-  margin: 50px 20px; }
-  .card_member .header_card {
+  text-decoration: none;
+  transition: all 0.1s 0s ease-out; }
+
+a.btn:hover {
+  background: #1B3762;
+  box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+  transform: translateY(-2px);
+  transition: all 0.25s 0s ease-out; }
+
+a.btn:active,
+a.btn:active {
+  background: #1B3762;
+  box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
+  transform: translate3d(0, 1px, 0);
+  transition: all 0.025s 0s ease-out; }
+
+div.cards {
+  margin: 80px auto;
+  max-width: 960px;
+  text-align: center; }
+
+div.card {
+  background: white;
+  display: inline-block;
+  margin: 8px;
+  max-width: 300px;
+  perspective: 1000;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s 0s ease-in;
+  width: 300px;
+  z-index: 1; }
+  div.card p, div.card ol {
+    padding: 10px; }
+  div.card .card__image-holder {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 0;
+    padding-bottom: 45%;
+    margin: 10px 0; }
+  div.card div.card-title {
+    background: white;
+    padding: 6px 15px 10px;
+    position: relative;
+    z-index: 0; }
+    div.card div.card-title a.toggle-info {
+      border-radius: 32px;
+      height: 32px;
+      padding: 0;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      width: 32px; }
+      div.card div.card-title a.toggle-info span {
+        background: white;
+        display: block;
+        height: 2px;
+        position: absolute;
+        top: 16px;
+        transition: all 0.15s 0s ease-out;
+        width: 12px; }
+      div.card div.card-title a.toggle-info span.left {
+        right: 14px;
+        transform: rotate(45deg); }
+      div.card div.card-title a.toggle-info span.right {
+        left: 14px;
+        transform: rotate(-45deg); }
+  div.card div.card-description {
+    padding: 0 15px 10px;
+    position: relative;
+    font-size: 14px; }
+  div.card div.card-details-install {
+    padding: 0 15px 10px;
+    position: relative;
+    font-size: 14px; }
+  div.card div.card-actions {
+    box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
+    padding: 10px 15px 20px;
+    text-align: center; }
+  div.card div.card-flap {
+    background: #d9d9d9;
     position: absolute;
     width: 100%;
-    height: 20%;
-    background: #dde7f5;
-    transition: height 0.4s;
-    overflow: hidden;
-    z-index: 2;
-    border-radius: 6px 6px 0 0; }
-    .card_member .header_card .title_card {
-      font-size: 20px;
-      color: #1B3762;
-      display: inline-block;
-      padding: 30px 20px;
-      text-transform: uppercase; }
-  .card_member .body_card {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    padding: 0 25px;
-    line-height: 25px;
-    display: flex;
-    align-items: center; }
-    .card_member .body_card p {
-      padding-top: 50px; }
+    transform-origin: top;
+    transform: rotateX(-90deg); }
+  div.card div.flap1 {
+    transition: all 0.3s 0.3s ease-out;
+    z-index: -1; }
+  div.card div.flap2 {
+    transition: all 0.3s 0s ease-out;
+    z-index: -2; }
 
-.card_member:hover .header_card {
-  height: 100%;
-  border-radius: 6px; }
+div.cards.showing div.card {
+  cursor: pointer;
+  opacity: 0.6;
+  transform: scale(0.88); }
 
-.header_card .info_survol {
-  width: 100%;
-  line-height: 25px;
-  float: left;
-  position: absolute;
-  height: 100%;
-  top: 75px;
-  padding: 30px; }
+div.cards.showing div.card:hover {
+  opacity: 0.94;
+  transform: scale(0.92); }
 
-ol {
-  list-style: circle;
-  margin-top: 10px; }
-  ol li {
-    line-height: 30px; }
-
-.img_card {
-  background-size: contain;
-  background-position: right;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 35%;
-  height: 28%;
-  right: 40px;
-  top: -50px;
-  z-index: 5; }
+div.card.show {
+  opacity: 1 !important;
+  transform: scale(1) !important; }
+  div.card.show div.card-title a.toggle-info {
+    background: salmon !important; }
+    div.card.show div.card-title a.toggle-info span {
+      top: 15px; }
+    div.card.show div.card-title a.toggle-info span.left {
+      right: 10px; }
+    div.card.show div.card-title a.toggle-info span.right {
+      left: 10px; }
+  div.card.show div.card-flap {
+    background: white;
+    transform: rotateX(0deg); }
+  div.card.show div.flap1 {
+    transition: all 0.3s 0s ease-out; }
+  div.card.show div.flap2 {
+    transition: all 0.3s 0.2s ease-out; }
 
 .all_partenaires {
   display: flex;
@@ -400,27 +468,40 @@ ol {
   display: inline-block; }
 
 .img_intro {
-  width: 40%;
+  width: 50%;
   margin: 50px auto;
   position: relative; }
   .img_intro svg {
-    position: relative; }
-    .img_intro svg polyline, .img_intro svg circle, .img_intro svg line {
-      opacity: 1; }
-    .img_intro svg .st3 {
-      stroke-dasharray: 3600px;
-      stroke-dashoffset: 3600px;
-      animation: anim 3s ease forwards; }
+    width: 75%; }
+  .img_intro:before {
+    content: 'Le GEDEM 77';
+    position: absolute;
+    color: #A8C550;
+    top: 110px;
+    left: 210px;
+    font-size: 28px; }
+  .img_intro:after {
+    content: 'Elle est dirigée par un Conseil d\'administration composé d\'un Président et de sept Vice-présidents élus pour deux ans par l\'Assemblée générale.';
+    position: absolute;
+    top: 160px;
+    left: 210px;
+    line-height: 25px; }
+  .img_intro svg polyline, .img_intro svg circle, .img_intro svg line {
+    opacity: 1; }
+  .img_intro svg .st3 {
+    stroke-dasharray: 3600px;
+    stroke-dashoffset: 3600px;
+    animation: anim 4s ease forwards; }
 
 @keyframes anim {
   to {
     stroke-dashoffset: 0; } }
-    .img_intro svg .st5 {
-      stroke-dasharray: 3600px;
-      stroke-dashoffset: 3600px;
-      animation: anim 6s ease forwards; }
-    .img_intro svg circle {
-      animation: appear 1.5s ease-in forwards; }
+  .img_intro svg .st5 {
+    stroke-dasharray: 3600px;
+    stroke-dashoffset: 3600px;
+    animation: anim 10s ease forwards; }
+  .img_intro svg circle {
+    animation: appear 1.5s ease-in forwards; }
 
 @keyframes appear {
   from {
@@ -534,7 +615,7 @@ label {
 
 .gedem_info {
   width: 100%;
-  padding: 75px 50px;
+  padding: 80px;
   background-color: #F2F4F6;
   display: flex;
   justify-content: space-between;
@@ -874,7 +955,7 @@ label {
   justify-content: space-evenly;
   flex-flow: row wrap; }
 
-.card {
+.card_presidence {
   position: relative;
   width: 275px;
   height: 350px;
@@ -883,8 +964,8 @@ label {
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
 
-.card::before,
-.card::after {
+.card_presidence::before,
+.card_presidence::after {
   content: "";
   position: absolute;
   top: 0;
@@ -896,11 +977,11 @@ label {
   transition: 0.5s;
   z-index: -1; }
 
-.card:hover::before {
+.card_presidence:hover::before {
   transform: rotate(10deg);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2); }
 
-.card:hover::after {
+.card_presidence:hover::after {
   transform: rotate(5deg);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2); }
 
@@ -914,7 +995,7 @@ label {
     .card_name p span {
       text-transform: uppercase; }
 
-.card .imgBx {
+.card_presidence .imgBx {
   position: absolute;
   top: 50px;
   left: 10px;
@@ -924,10 +1005,10 @@ label {
   transition: 0.5s;
   z-index: 1; }
 
-.card:hover .imgBx {
+.card_presidence:hover .imgBx {
   bottom: 80px; }
 
-.card .imgBx img {
+.card_presidence .imgBx img {
   position: absolute;
   top: 0;
   left: 0;
@@ -935,7 +1016,7 @@ label {
   height: 100%;
   object-fit: cover; }
 
-.card .details {
+.card_presidence .details {
   position: absolute;
   left: 10px;
   right: 10px;
@@ -945,18 +1026,18 @@ label {
   opacity: 0;
   transition: all 1.5s ease; }
 
-.card:hover .details {
+.card_presidence:hover .details {
   z-index: 1;
   opacity: 1; }
 
-.card .details p {
+.card_presidence .details p {
   margin: 0;
   padding: 0;
   font-weight: 500;
   font-size: 16px;
   color: #777; }
 
-.card .details p span {
+.card_presidence .details p span {
   font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;
