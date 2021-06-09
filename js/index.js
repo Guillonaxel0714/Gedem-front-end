@@ -265,32 +265,38 @@ function initmap(){
 initmap();
 
 let zindex = 10;
-
-const cardButton = document.querySelector('.card');
+ 
+const cardButton = document.querySelectorAll('.card');
 const cards = document.querySelector('.cards');
-
-cardButton.addEventListener('click', (e) =>{
-  e.preventDefault();
-  let isShowing = false;
-  
-  if(cardButton.classList.contains('show')){
-    isShowing = true;
-  }
-  if(cards.classList.contains('showing')){
-    cardButton.classList.remove('show');
-
+ 
+for (let i = 0; i < cardButton.length; i++) {
+  cardButton[i].addEventListener('click', (e) => {
+    e.preventDefault();
+    let isShowing = false;
+ 
+    if(cardButton[i].classList.contains('show')){
+      isShowing = true;
+    }
+    if(cards.classList.contains('showing')){
+      cardButton[i].classList.remove('show');
+ 
     if(isShowing){
       cards.classList.remove('showing');
     } else {
       cards.classList.add('show');
     }
-
+ 
     zindex++;
+ 
+    } else{
+      cards.classList.add('showing');
+      cardButton[i].style.zIndex = zindex++;
+      cardButton[i].classList.add('show');
+    }
+  });
+}
 
-  } else{
-    cards.classList.add('showing');
+// ANIMATE ON SCROLL INITIALISATION
 
-    cardButton.classList.add('show');
-    zindex++;
-  }
-});
+AOS.init();
+

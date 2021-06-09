@@ -226,6 +226,12 @@
   flex-wrap: wrap;
   margin: 50px 20px; }
 
+select {
+  padding: 5px;
+  color: #1B3762;
+  border: 2px solid grey;
+  border-radius: 4px; }
+
 .items-list {
   max-width: 90vw;
   margin: 2rem;
@@ -348,7 +354,7 @@ div.card {
     background-repeat: no-repeat;
     height: 0;
     padding-bottom: 45%;
-    margin: 10px 0; }
+    margin: 10px 30px; }
   div.card div.card-title {
     background: white;
     padding: 6px 15px 10px;
@@ -468,7 +474,7 @@ div.card.show {
   display: inline-block; }
 
 .img_intro {
-  width: 50%;
+  width: 650px;
   margin: 50px auto;
   position: relative; }
   .img_intro svg {
@@ -477,21 +483,22 @@ div.card.show {
     content: 'Le GEDEM 77';
     position: absolute;
     color: #A8C550;
-    top: 110px;
+    top: 90px;
     left: 210px;
     font-size: 28px; }
   .img_intro:after {
     content: 'Elle est dirigée par un Conseil d\'administration composé d\'un Président et de sept Vice-présidents élus pour deux ans par l\'Assemblée générale.';
     position: absolute;
-    top: 160px;
+    top: 140px;
     left: 210px;
-    line-height: 25px; }
+    line-height: 25px;
+    font-size: 16px; }
   .img_intro svg polyline, .img_intro svg circle, .img_intro svg line {
     opacity: 1; }
   .img_intro svg .st3 {
     stroke-dasharray: 3600px;
     stroke-dashoffset: 3600px;
-    animation: anim 4s ease forwards; }
+    animation: anim 3s ease forwards; }
 
 @keyframes anim {
   to {
@@ -514,10 +521,10 @@ div.card.show {
   justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   padding: 80px 80px 20px0 50px; }
   .container-president .img-president {
-    width: 30vw;
+    width: 30%;
     padding: 25px;
     display: flex;
     align-items: center;
@@ -530,7 +537,7 @@ div.card.show {
       margin-left: auto;
       margin-right: auto; }
   .container-president .txt-president {
-    width: 35vw;
+    width: 35%;
     font-size: 22px;
     text-align: center;
     line-height: 35px; }
@@ -551,6 +558,41 @@ div.card.show {
   justify-content: space-between;
   padding: 130px 0;
   text-align: center; }
+
+@media screen and (max-width: 768px) {
+  .img_intro {
+    width: 600px;
+    margin: 50px auto;
+    position: relative; }
+    .img_intro svg {
+      width: 75%; }
+    .img_intro:before {
+      font-size: 23px;
+      top: 100px;
+      left: 180px; }
+    .img_intro:after {
+      font-size: 14px;
+      top: 130px;
+      left: 180px;
+      width: 350px; } }
+
+@media screen and (max-width: 376px) {
+  .img_intro {
+    width: 500px;
+    margin: 50px auto;
+    position: relative; }
+    .img_intro svg {
+      width: 75%; }
+    .img_intro:before {
+      font-size: 20px;
+      top: 70px;
+      left: 130px; }
+    .img_intro:after {
+      font-size: 12px;
+      top: 100px;
+      left: 130px;
+      line-height: 20px;
+      width: 250px; } }
 
 .objectifs .all_goals .goal p:not(:last-child) {
   text-transform: uppercase;
@@ -723,6 +765,8 @@ label {
   white-space: nowrap;
   overflow-x: hidden;
   padding-top: 100px; }
+  .timeline p {
+    line-height: 23px; }
 
 .timeline ol {
   font-size: 0;
@@ -953,13 +997,14 @@ label {
 .all_cards {
   display: flex;
   justify-content: space-evenly;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  margin: 100px 0; }
 
 .card_presidence {
   position: relative;
   width: 275px;
   height: 350px;
-  margin: 0 0 100px;
+  margin: 15px 0;
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
@@ -1128,13 +1173,12 @@ footer {
     flex-direction: column-reverse; }
     .footer_row .footer-nav {
       width: 100%;
-      padding: 25px 0 25px 25%; }
+      padding: 20px 0; }
     .footer_row .section_footer_img {
       width: 300px;
-      padding: 25px 0 25px 25%; }
+      padding: 20px 0; }
     .footer_row .footer_coord {
-      width: 100%;
-      padding: 25px 0 25px 25%; } }
+      width: 100%; } }
 
 .objectifs .all_goals .goal p:not(:last-child) {
   text-transform: uppercase;

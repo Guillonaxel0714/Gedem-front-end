@@ -2,7 +2,7 @@
 @import '../abstracts/variable.scss';
 
 .img_intro{
-    width: 50%;
+    width: 650px;
     margin: 50px auto;
     position: relative;
 
@@ -14,7 +14,7 @@
         content: 'Le GEDEM 77';
         position: absolute;
         color: $secondary-color;
-        top: 110px;
+        top: 90px;
         left: 210px;
         font-size: 28px;
     }
@@ -22,9 +22,10 @@
     &:after{
         content: 'Elle est dirigée par un Conseil d\'administration composé d\'un Président et de sept Vice-présidents élus pour deux ans par l\'Assemblée générale.';
         position: absolute;
-        top: 160px;
+        top: 140px;
         left: 210px;
         line-height: 25px;
+        font-size: 16px;
     }
 
     svg{
@@ -36,7 +37,7 @@
         .st3{
             stroke-dasharray: 3600px;
             stroke-dashoffset: 3600px;
-            animation: anim 4s ease forwards;
+            animation: anim 3s ease forwards;
         }
 
         @keyframes anim {
@@ -67,11 +68,11 @@
 }
 
 .container-president{
-    @include flex-el(flex, space-evenly, row, center, wrap);
+    @include flex-el(flex, space-evenly, row, center, nowrap);
     padding: $padding-section + 0 50px;
 
     .img-president{
-        width: 30vw;
+        width: 30%;
         padding: 25px;
         display: flex;
         align-items: center;
@@ -87,7 +88,7 @@
         }
     }
     .txt-president{
-        width: 35vw;
+        width: 35%;
         font-size: 22px;
         text-align: center;
         line-height: 35px;
@@ -99,7 +100,6 @@
         }
     }
 }
-
 
 .sct-vice-presidence{
     background: #F2F4F6;
@@ -115,7 +115,59 @@
     justify-content: space-between;
     padding: 130px 0;
     text-align: center;
+}
 
+@media screen and (max-width: 768px) {
+    .img_intro{
+        width: 600px;
+        margin: 50px auto;
+        position: relative;
+    
+        svg{
+            width: 75%;
+        }
+    
+        &:before{
+            font-size: 23px;
+            top: 100px;
+            left: 180px;
+        }
+    
+        &:after{
+            font-size: 14px;
+            top: 130px;
+            left: 180px;
+            width: 350px;
+        }
+    
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .img_intro{
+        width: 500px;
+        margin: 50px auto;
+        position: relative;
+    
+        svg{
+            width: 75%;
+        }
+    
+        &:before{
+            font-size: 20px;
+            top: 70px;
+            left: 130px;
+        }
+    
+        &:after{
+            font-size: 12px;
+            top: 100px;
+            left: 130px;
+            line-height: 20px;
+            width: 250px;
+        }
+    
+    }
 }
 
 
