@@ -52,7 +52,7 @@
     color: #A8C550;
     font-size: 25px;
     font-weight: bold;
-    text-align: center; }
+    margin-left: 23%; }
 
 .about_img {
   width: 50%; }
@@ -330,7 +330,7 @@ a.btn:active {
   transform: translate3d(0, 1px, 0);
   transition: all 0.025s 0s ease-out; }
 
-div.cards {
+div#cards {
   margin: 80px auto;
   max-width: 960px;
   text-align: center; }
@@ -345,7 +345,8 @@ div.card {
   text-align: left;
   transition: all 0.3s 0s ease-in;
   width: 300px;
-  z-index: 1; }
+  z-index: 1;
+  cursor: pointer; }
   div.card p, div.card ol {
     padding: 10px; }
   div.card .card__image-holder {
@@ -407,12 +408,11 @@ div.card {
     transition: all 0.3s 0s ease-out;
     z-index: -2; }
 
-div.cards.showing div.card {
-  cursor: pointer;
+div#cards.showing div.card {
   opacity: 0.6;
   transform: scale(0.88); }
 
-div.cards.showing div.card:hover {
+div#cards.showing div.card:hover {
   opacity: 0.94;
   transform: scale(0.92); }
 
@@ -479,15 +479,13 @@ div.card.show {
   position: relative; }
   .img_intro svg {
     width: 75%; }
-  .img_intro:before {
-    content: 'Le GEDEM 77';
+  .img_intro span {
     position: absolute;
     color: #A8C550;
     top: 90px;
     left: 210px;
     font-size: 28px; }
-  .img_intro:after {
-    content: 'Elle est dirigée par un Conseil d\'administration composé d\'un Président et de sept Vice-présidents élus pour deux ans par l\'Assemblée générale.';
+  .img_intro p {
     position: absolute;
     top: 140px;
     left: 210px;
@@ -516,35 +514,37 @@ div.card.show {
   to {
     opacity: 1; } }
 
-.container-president {
+.presidence {
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: nowrap;
-  padding: 80px 80px 20px0 50px; }
-  .container-president .img-president {
-    width: 30%;
+  align-items: center; }
+  .presidence .presidence_txt {
+    min-width: 200px;
+    max-width: 350px;
+    text-align: center;
+    margin: 0 auto;
+    flex: 1; }
+    .presidence .presidence_txt span {
+      font-size: 35px;
+      color: #1B3762; }
+    .presidence .presidence_txt div {
+      margin: 50px;
+      line-height: 30px; }
+  .presidence .presidence_img {
+    min-width: 150px;
+    max-width: 400px;
     padding: 25px;
     display: flex;
     align-items: center;
     background-color: #bfd1e79c;
-    border-radius: 12px; }
-    .container-president .img-president img {
-      width: 100%;
+    border-radius: 12px;
+    margin: 50px auto;
+    flex: 2; }
+    .presidence .presidence_img img {
+      max-width: 100%;
       border-radius: 12px;
       display: block;
       margin-left: auto;
       margin-right: auto; }
-  .container-president .txt-president {
-    width: 35%;
-    font-size: 22px;
-    text-align: center;
-    line-height: 35px; }
-    .container-president .txt-president .president_name {
-      padding-bottom: 10%;
-      font-size: 40px;
-      color: #1B3762; }
 
 .sct-vice-presidence {
   background: #F2F4F6;
@@ -566,15 +566,19 @@ div.card.show {
     position: relative; }
     .img_intro svg {
       width: 75%; }
-    .img_intro:before {
-      font-size: 23px;
-      top: 100px;
-      left: 180px; }
-    .img_intro:after {
-      font-size: 14px;
-      top: 130px;
-      left: 180px;
-      width: 350px; } }
+  .presidence {
+    flex-direction: column; } }
+
+@media screen and (max-width: 575px) {
+  .img_intro span {
+    top: 80px;
+    left: 185px; }
+  .img_intro p {
+    width: 200px;
+    font-size: 12px;
+    line-height: 22px;
+    top: 115px;
+    left: 185px; } }
 
 @media screen and (max-width: 376px) {
   .img_intro {
@@ -583,11 +587,11 @@ div.card.show {
     position: relative; }
     .img_intro svg {
       width: 75%; }
-    .img_intro:before {
+    .img_intro span {
       font-size: 20px;
       top: 70px;
       left: 130px; }
-    .img_intro:after {
+    .img_intro p {
       font-size: 12px;
       top: 100px;
       left: 130px;
@@ -759,12 +763,49 @@ label {
   position: relative;
   display: inline-block; }
 
+.sct-single-article h1 {
+  display: block;
+  color: #1B3762;
+  text-align: center;
+  padding: 25px 0;
+  position: relative; }
+  .sct-single-article h1:after {
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 3px;
+    background-color: #A8C550;
+    bottom: 0;
+    left: 42%;
+    transform: translate(-50% -50%); }
+
+.sct-single-article .img_article {
+  width: 40%;
+  margin: 100px auto 50px; }
+  .sct-single-article .img_article img {
+    max-width: 100%; }
+
+.sct-single-article .paragraphe_article {
+  margin: 100px 50px; }
+  .sct-single-article .paragraphe_article p {
+    text-align: justify;
+    line-height: 25px;
+    margin: 5px 0; }
+
+.objectifs .all_goals .goal p:not(:last-child) {
+  text-transform: uppercase;
+  color: #1B3762;
+  font-size: 25px;
+  padding: 10px;
+  position: relative;
+  display: inline-block; }
+
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline {
   white-space: nowrap;
   overflow-x: hidden;
-  padding-top: 100px; }
+  padding-top: 50px; }
   .timeline p {
     line-height: 23px; }
 
@@ -847,7 +888,7 @@ label {
 .timeline .arrows {
   display: flex;
   justify-content: center;
-  margin-top: 100px; }
+  margin: 50px 0; }
   .timeline .arrows button {
     border: none;
     background-color: transparent; }
@@ -1099,7 +1140,7 @@ label {
   display: inline-block; }
 
 .button {
-  width: 150px;
+  width: 175px;
   margin: 10px auto;
   background-color: white;
   border: 2px solid #1B3762;
@@ -1426,7 +1467,8 @@ a {
   color: #1B3762; }
 
 section {
-  padding: 80px 80px 20px; }
+  padding: 80px 80px 20px;
+  width: 100%; }
 
 h3 {
   color: #1B3762;

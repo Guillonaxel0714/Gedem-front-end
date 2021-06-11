@@ -264,36 +264,59 @@ function initmap(){
 
 initmap();
 
-let zindex = 10;
- 
-const cardButton = document.querySelectorAll('.card');
-const cards = document.querySelector('.cards');
- 
-for (let i = 0; i < cardButton.length; i++) {
-  cardButton[i].addEventListener('click', (e) => {
-    e.preventDefault();
-    let isShowing = false;
- 
-    if(cardButton[i].classList.contains('show')){
-      isShowing = true;
-    }
-    if(cards.classList.contains('showing')){
-      cardButton[i].classList.remove('show');
- 
-    if(isShowing){
-      cards.classList.remove('showing');
-    } else {
-      cards.classList.add('show');
-    }
- 
-    zindex++;
- 
-    } else{
-      cards.classList.add('showing');
-      cardButton[i].style.zIndex = zindex++;
-      cardButton[i].classList.add('show');
-    }
+const cards = document.getElementById("cards");
+const card = document.getElementsByClassName("card");
+const link=document.querySelectorAll(".card>.flap1>.flap2>.card-actions>a")
+let zIndex = 10;
+
+for (let index = 0; index < card.length; index++) {
+  card[index].addEventListener("click", (e) => {
+    makeCardUp(e,index)
   });
+}
+
+function makeCardUp(e,index){
+  console.log(link)
+  e.preventDefault();
+  let isShowing = false;
+  if (card[index].classList.contains("show")) {
+    isShowing = true;
+  }
+  if (cards.classList.contains("showing")) {
+    document.getElementsByClassName("show")[0].classList.remove("show");
+    // pour emepcher le memmory leak
+    link[index].removeEventListener("click",()=>{
+      document.location.href=link[index].href;
+    })
+    if (isShowing) {
+      cards.classList.remove("showing");
+      for(let i=0;i<card.length;i++){
+        if(i!=index){
+          card[i].style=""
+        }
+      }
+    } else {
+      card[index].style = `z-index : ${zIndex}`;
+      card[index].classList.add("show");
+      link[index].addEventListener("click",()=>{
+        document.location.href=link[index].href;
+      })
+    }
+    zIndex++;
+  } else {
+    cards.classList.add("showing");
+    for(let i=0;i<card.length;i++){
+      if(i!=index){
+        card[i].style="cursor:pointer;opacity:0.6;transform:scale(0.88)";
+      }
+    }
+    card[index].style = `z-index : ${zIndex}`;
+    card[index].classList.add("show");
+    link[index].addEventListener("click",()=>{
+      document.location.href=link[index].href;
+    })
+    zIndex++;
+  }
 }
 
 // ANIMATE ON SCROLL INITIALISATION

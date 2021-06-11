@@ -4,6 +4,7 @@
 @import 'pages/gouvernance.scss';
 @import 'pages/contact.scss';
 @import 'pages/legales.scss';
+@import 'pages/single-article';
 
 @import 'components/timeline.scss';
 @import 'components/to-the-top.scss';
@@ -38,6 +39,7 @@ a{
 
 section{
     padding: $padding-section;
+    width: 100%
 }
 
 h3{

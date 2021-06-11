@@ -1,0 +1,41 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variable';
+
+.sct-single-article{
+    h1{
+        display: block;
+        color: $main-color-blue;
+        text-align: center;
+        padding: 25px 0;
+        position: relative;
+
+        &:after{
+            content: '';
+            position: absolute;
+            width: 15%;
+            height: 3px;
+            background-color: $secondary-color;
+            bottom: 0;
+            left: 42%;
+            transform: translate(-50% -50%);
+        }
+    }
+
+    .img_article{
+        width: 40%;
+        margin: 100px auto 50px;
+
+        img{
+            max-width: 100%;
+        }
+    }
+
+    .paragraphe_article{
+        margin: 100px 50px;
+        p{
+            text-align: justify;
+            line-height: 25px;
+            margin: 5px 0;
+        }
+    }
+}

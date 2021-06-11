@@ -10,8 +10,7 @@
         width: 75%;
     }
 
-    &:before{
-        content: 'Le GEDEM 77';
+    span{
         position: absolute;
         color: $secondary-color;
         top: 90px;
@@ -19,13 +18,12 @@
         font-size: 28px;
     }
 
-    &:after{
-        content: 'Elle est dirigée par un Conseil d\'administration composé d\'un Président et de sept Vice-présidents élus pour deux ans par l\'Assemblée générale.';
+    p{
         position: absolute;
         top: 140px;
         left: 210px;
         line-height: 25px;
-        font-size: 16px;
+        font-size: 16px; 
     }
 
     svg{
@@ -67,39 +65,49 @@
     }
 }
 
-.container-president{
-    @include flex-el(flex, space-evenly, row, center, nowrap);
-    padding: $padding-section + 0 50px;
+.presidence{
+    display: flex;
+    align-items: center;
 
-    .img-president{
-        width: 30%;
+    .presidence_txt{
+        min-width: 200px;
+        max-width: 350px;
+        text-align: center;
+        margin: 0 auto;
+        flex: 1;
+
+        span{
+            font-size: 35px;
+            color: $main-color-blue;
+        }
+
+        div{
+            margin: 50px;
+            line-height: 30px;
+        }
+    }
+    .presidence_img{
+        min-width: 150px;
+        max-width: 400px;
         padding: 25px;
         display: flex;
         align-items: center;
         background-color: #bfd1e79c;
         border-radius: 12px;
+        margin: 50px auto;
+        flex: 2;
 
         img{
-            width: 100%;
+            max-width: 100%;
             border-radius: 12px;
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
     }
-    .txt-president{
-        width: 35%;
-        font-size: 22px;
-        text-align: center;
-        line-height: 35px;
-
-        .president_name{
-            padding-bottom: 10%;
-            font-size: 40px;
-            color: $main-color-blue;
-        }
-    }
 }
+
+
 
 .sct-vice-presidence{
     background: #F2F4F6;
@@ -126,20 +134,26 @@
         svg{
             width: 75%;
         }
-    
-        &:before{
-            font-size: 23px;
-            top: 100px;
-            left: 180px;
+    }
+    .presidence{
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 575px){
+    .img_intro{
+        span{
+            top: 80px;
+            left: 185px;
         }
-    
-        &:after{
-            font-size: 14px;
-            top: 130px;
-            left: 180px;
-            width: 350px;
+        p{
+            width: 200px;
+            font-size: 12px;
+            line-height: 22px;
+            top: 115px;
+            left: 185px;
         }
-    
     }
 }
 
@@ -153,13 +167,13 @@
             width: 75%;
         }
     
-        &:before{
+        span{
             font-size: 20px;
             top: 70px;
             left: 130px;
         }
     
-        &:after{
+        p{
             font-size: 12px;
             top: 100px;
             left: 130px;
