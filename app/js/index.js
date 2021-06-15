@@ -213,6 +213,7 @@ if(undefined != timeline){
       });
     }
   }
+  
 
   // ADD SWIPE SUPPORT FOR TOUCH DEVICES
   function setSwipeFn(tl, prev, next) {
@@ -224,9 +225,6 @@ if(undefined != timeline){
 
 
 // MAP 
-
-
-
 
 let mymap;
 var mapid = document.getElementById('mapid')
